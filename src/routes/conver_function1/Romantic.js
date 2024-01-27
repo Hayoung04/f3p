@@ -21,11 +21,16 @@ function Romantic() {
     setTopic(Topic[variable]);
     console.log(variable);
   };
+  const reset = () => {
+    variable = 0;
+    setTopic(Topic[variable]);
+  };
   return (
     <div>
       <button onClick={beforeBtn}>before</button>
       <p>{topic}</p>
       <button onClick={nextBtn}>next</button>
+      <button onClick={reset}>reset</button>
       <p>
         <Link to="/">To Home</Link>
       </p>
