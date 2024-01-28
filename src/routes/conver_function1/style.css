@@ -7,7 +7,45 @@
   text-align: center;
 }
 
+#category {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 #category button {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 300px;
+  border-radius: 10px;
+  border: none;
+}
+
+#category .romantic {
+  background: linear-gradient(rgb(255, 0, 0, 0.5), rgb(255, 0, 0, 0.8));
+  color: white;
+}
+
+#category :hover {
+  background-color: black;
+}
+
+#category .relationship {
+  background: linear-gradient(rgb(255, 192, 203, 0.7), rgb(255, 192, 203, 0.9));
+  color: white;
+}
+
+#category :hover {
+  background-color: black;
+}
+
+#category .icebreaking {
+  background: linear-gradient(rgb(0, 191, 255, 0.3), rgb(0, 191, 255, 0.6));
+  color: white;
+}
+
+#category :hover {
+  background-color: black;
+}
+
+#category button span {
+  font-size: 30px;
 }

@@ -24,9 +24,21 @@ function BaConTopic() {
         카테고리를 골라보세요
       </h2>
       <div id="category">
-        <button onClick={toRomantic}>연애</button>
-        <button onClick={toRelationship}>인간관계</button>
-        <button onClick={toIcebreaking}>아이스브레이킹</button>
+        <button onClick={toRomantic} className="romantic">
+          연애
+          <br />
+          <span>❤️</span>
+        </button>
+        <button onClick={toRelationship} className="relationship">
+          인간관계
+          <br />
+          <span>👥</span>
+        </button>
+        <button onClick={toIcebreaking} className="icebreaking">
+          아이스브레이킹
+          <br />
+          <span>🗣️</span>
+        </button>
       </div>
     </div>
   );
