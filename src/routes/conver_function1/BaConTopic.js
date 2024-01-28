@@ -10,13 +10,13 @@ function BaConTopic() {
       <h3>나의 상황에 맞는 카테고리를 골라보세요</h3>
       <div id="category">
         <div>
-          <Link to="/romantic">연애</Link>
+          <Link to="/basic/romantic">연애</Link>
         </div>
         <div>
-          <Link to="/relationship">인간관계</Link>
+          <Link to="/basic/relationship">인간관계</Link>
         </div>
         <div>
-          <Link to="icebreaking">아이스브레이킹</Link>
+          <Link to="/basic/icebreaking">아이스브레이킹</Link>
         </div>
       </div>
     </div>
