@@ -1,51 +1,66 @@
+/* header 부분 */
 #basic h1 {
-  border: solid 1px black;
-  text-align: center;
+  margin: 0;
+  padding: 20px;
+  background-color: #fff4bb;
+  font-size: 20px;
 }
 
+/*중간 멘트*/
 #basic h2 {
   text-align: center;
 }
 
+/*버튼 css*/
 #category {
   display: flex;
   justify-content: space-evenly;
 }
 
 #category button {
-  width: 200px;
-  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   border-radius: 10px;
   border: none;
+  color: black;
+  padding-left: 15px;
+}
+
+#category .title {
+  font-size: 15px;
+  font-weight: 500;
+}
+#category .icon {
+  font-size: 15px;
+  padding-right: 5px;
+}
+#category .explanation {
+  font-size: 16px;
+  font-weight: bolder;
+}
+#category button img {
+  width: 150px;
 }
 
 #category .romantic {
-  background: linear-gradient(rgb(255, 0, 0, 0.5), rgb(255, 0, 0, 0.8));
-  color: white;
-}
-
-#category :hover {
-  background-color: black;
+  width: 200px;
+  height: 300px;
+  background: linear-gradient(rgb(255, 0, 0, 0.3), rgb(255, 0, 0, 0.6));
 }
 
 #category .relationship {
+  width: 200px;
+  height: 300px;
   background: linear-gradient(rgb(255, 192, 203, 0.7), rgb(255, 192, 203, 0.9));
-  color: white;
-}
-
-#category :hover {
-  background-color: black;
 }
 
 #category .icebreaking {
+  width: 200px;
+  height: 300px;
   background: linear-gradient(rgb(0, 191, 255, 0.3), rgb(0, 191, 255, 0.6));
-  color: white;
 }
 
 #category :hover {
   background-color: black;
-}
-
-#category button span {
-  font-size: 30px;
 }
