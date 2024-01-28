@@ -32,7 +32,7 @@ function Relationship() {
       <button onClick={nextBtn}>next</button>
       <button onClick={reset}>reset</button>
       <p>
-        <Link to="/">To Home</Link>
+        <Link to="/basic">To Home</Link>
       </p>
     </div>
   );
