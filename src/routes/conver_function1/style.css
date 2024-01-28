@@ -1,0 +1,13 @@
+#basic h1 {
+  border: solid 1px black;
+  text-align: center;
+}
+
+#basic h2 {
+  text-align: center;
+}
+
+#category button {
+  width: 100px;
+  height: 100px;
+}
