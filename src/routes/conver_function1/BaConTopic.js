@@ -32,6 +32,7 @@ function BaConTopic() {
           <span className="explanation">사랑을 묻고 답하다</span>
           <img src="/img/heart-dynamic-clay.png" alt="Heart" />
         </button>
+
         <button onClick={toRelationship} className="relationship">
           <span className="title">
             <span className="icon">😎</span>친구
@@ -40,6 +41,7 @@ function BaConTopic() {
           <span className="explanation">밤새 끊이지 않는 대화</span>
           <img src="img/thumb-up-dynamic-color.png" alt="Friend" />
         </button>
+
         <button onClick={toIcebreaking} className="icebreaking">
           <span className="title">
             <span className="icon">🧊</span>아이스브레이킹

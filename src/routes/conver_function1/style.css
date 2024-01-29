@@ -12,10 +12,6 @@
 }
 
 /*버튼 css*/
-#category {
-  display: flex;
-  justify-content: space-evenly;
-}
 
 #category button {
   display: flex;
