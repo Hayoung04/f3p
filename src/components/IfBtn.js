@@ -6,7 +6,12 @@ const IfBtn = () => {
 
   return (
     <button onClick={toIf} className="if">
-      과몰입 부르는 if
+      <span className="title">
+        <span className="icon">❔</span>If
+      </span>
+      <br />
+      <span className="explanation">끝없는 상상력, 과몰입</span>
+      <img src="img/target-dynamic-color.png" alt="Friend" />
     </button>
   );
 };

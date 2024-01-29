@@ -6,7 +6,12 @@ const SeriousConverBtn = () => {
 
   return (
     <button onClick={toSeriousConver} className="seriousConver">
-      진지한대화
+      <span className="title">
+        <span className="icon">💬</span>진지한대화
+      </span>
+      <br />
+      <span className="explanation">우리 진지해져 볼까..?</span>
+      <img src="img/tea-cup-dynamic-premium.png" alt="Friend" />
     </button>
   );
 };

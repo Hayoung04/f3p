@@ -12,11 +12,21 @@ import "./style.css";
 function ConverRmdHome() {
   return (
     <div id="basic">
-      <h1>지금 내게 필요한 대화주제 추천 서비스, F3P!</h1>
+      <h1>F3PHER</h1>
       <h2>
         나의 상황에 맞는 <br />
         카테고리를 골라보세요
       </h2>
+      <div className="txtCnt">
+        <span>#연애</span>
+        <span>#소개팅</span>
+        <span>#친구</span>
+        <span>#밤샘 토크</span>
+        <br />
+        <span>#대화가 필요하다면?</span>
+        <span>#삭막한 분위기가 힘들다면?</span>
+        <span>#F3PHER과 함께</span>
+      </div>
       <div id="category">
         <div id="section1">
           <BalanceBtn />
