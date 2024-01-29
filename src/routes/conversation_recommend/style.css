@@ -9,6 +9,47 @@
 /*중간 멘트*/
 #basic h2 {
   text-align: center;
+  margin: 60px 0 60px 0;
 }
 
-/*버튼 css*/
+/*버튼 레이아웃 배열 css*/
+#category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#section1 {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+}
+#section1_b {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.balanceGame {
+  height: 520px;
+  width: 300px;
+}
+.if,
+.seriousConver {
+  width: 300px;
+  height: 250px;
+}
+.romantic {
+  height: 250px;
+}
+.friend {
+  width: 610px;
+  height: 250px;
+}
+.icebreaking {
+  width: 310px;
+  height: 250px;
+}
+button {
+  margin: 10px 10px 10px 10px;
+}
