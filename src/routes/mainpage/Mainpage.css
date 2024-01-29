@@ -8,19 +8,42 @@
 }
 .profile-link {
   font-size: 14px;
+  margin-right: 100px;
+  margin-bottom: 55px;
 }
 
-.profile-image {
-  width: 24px; /* 이미지의 너비를 조정해 필요한 크기로 설정하세요 */
-  height: 24px; /* 이미지의 높이를 조정해 필요한 크기로 설정하세요 */
-}
 .header__menu li:hover::before {
   content: "프로필"; /* '프로필'이라는 글씨 추가 */
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 14px;
+  margin-right: 40px;
+  margin-top: 16px;
+  font-size: 15px;
+  color: black;
+}
+
+.profile-link {
+  position: relative; /* 추가 */
+  display: inline-block; /* 추가 */
+}
+
+.profile-link .profile-image {
+  position: absolute; /* 추가 */
+  top: 0; /* 추가 */
+  left: 0; /* 추가 */
+  opacity: 1; /* 추가 */
+  transition: opacity 0.02s ease; /* 추가 */
+}
+
+.profile-link:hover .profile-image {
+  opacity: 0; /* 추가 */
+}
+
+.header__menu li:hover::before {
+  content: "프로필"; /* '프로필'이라는 글씨 추가 */
+  position: absolute;
+  margin-right: 50px;
+  margin-top: 16px;
+  font-size: 15px;
   color: black;
 }
 
@@ -43,7 +66,7 @@
   width: 100%;
   display: flex;
   color: #002a32;
-  padding: 20px;
+  padding: 50px;
   font-weight: 450;
   font-size: 50px;
 }
@@ -80,7 +103,7 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: #ffffff;
-  padding: 7px 100px;
+  padding: 34px 100px;
 }
 
 .header__logo {
@@ -97,7 +120,7 @@ body {
 }
 
 .header__menu li {
-  padding: 8px 25px;
+  padding: 20px 20px;
 }
 
 .header__menu li:hover {
@@ -168,7 +191,7 @@ body {
   width: 100%;
   display: flex;
   color: #000981;
-  padding: 20px;
+  padding: 1px;
   font-weight: 450;
   font-size: 50px;
 }
@@ -205,7 +228,7 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: #002a32;
-  padding: 0.002px 40px;
+  padding: 0.002px px;
 }
 
 .header2__logo {

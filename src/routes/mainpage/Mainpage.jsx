@@ -12,7 +12,13 @@ const Mainpage = () => {
         <ul className="header__menu">
           <li>
             <a href="#likelionContact-footer" className="profile-link">
-              <img src="/Users/kimha-eun/Desktop/대화주제만들기/f3p/public/image/image02.png " />
+              <span className="profile-image">
+                <img
+                  src={`${process.env.PUBLIC_URL}/image/image02.png`}
+                  width="60"
+                  height="60"
+                />
+              </span>
             </a>
           </li>
         </ul>
@@ -50,7 +56,11 @@ const Mainpage = () => {
             loop
           ></video>
           <div className="massage"> </div>
-          <div className="text">" 획기적인 문구 "</div>
+          <div className="text">
+            " interesting <br></br>
+            <br></br> good <br></br>
+            <br></br> conversation "
+          </div>
         </div>
       </div>
 
