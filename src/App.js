@@ -8,6 +8,7 @@ import Icebreaking from "./routes/conver_function1/Icebreaking";
 import BalanceGame from "./routes/conver_function2/BalanceGame";
 import RomanticGame from "./routes/conver_function2/RomanticGame";
 import Profile from "./routes/profile/Profile";
+import Mainpage from "./routes/mainpage/Mainpage";
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
         </Routes>
         <Routes>
           <Route path="/profile" element={<Profile />}></Route>
+        </Routes>
+        <Routes>
+          <Route path="/" element={<Mainpage />}></Route>
         </Routes>
       </Router>
     </div>
