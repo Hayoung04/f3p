@@ -15,7 +15,7 @@ function Profile() {
       <div className={styles.header}>
         <h1>Profile page</h1>
       </div>
-      <img className={styles.user} src="img/person.png" alt="user"></img>
+      <img className={styles.user} src="image/image02.png" alt="user"></img>
       <div className={styles.container} onClick={handleContainerClick}>
         {[...Array(3)].map((_, rowIndex) => (
           <div key={rowIndex} className={styles.row}>
