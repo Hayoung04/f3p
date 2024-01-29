@@ -18,11 +18,23 @@
   flex-direction: column;
   justify-content: space-evenly;
   border-radius: 10px;
-  border: none;
+  border: solid 1px black;
   color: black;
   padding-left: 15px;
 }
 
+.grid1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.grid3 {
+  display: flex;
+  flex-direction: column;
+}
+.grid4 {
+  display: flex;
+}
 #category .title {
   font-size: 15px;
   font-weight: 500;
@@ -40,23 +52,19 @@
 }
 
 #category .romantic {
-  width: 200px;
+  /* width: 200px;
   height: 300px;
-  background: linear-gradient(rgb(255, 0, 0, 0.3), rgb(255, 0, 0, 0.6));
+  background: linear-gradient(rgb(255, 0, 0, 0.3), rgb(255, 0, 0, 0.6)); */
 }
 
 #category .relationship {
-  width: 200px;
+  /* width: 200px;
   height: 300px;
-  background: linear-gradient(rgb(255, 192, 203, 0.7), rgb(255, 192, 203, 0.9));
+  background: linear-gradient(rgb(255, 192, 203, 0.7), rgb(255, 192, 203, 0.9)); */
 }
 
 #category .icebreaking {
-  width: 200px;
+  /* width: 200px;
   height: 300px;
-  background: linear-gradient(rgb(0, 191, 255, 0.3), rgb(0, 191, 255, 0.6));
-}
-
-#category :hover {
-  background-color: black;
+  background: linear-gradient(rgb(0, 191, 255, 0.3), rgb(0, 191, 255, 0.6)); */
 }
