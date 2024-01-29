@@ -9,7 +9,7 @@ const Topic = [
 
 let variable = 0;
 
-function Relationship() {
+function Friend() {
   const [topic, setTopic] = useState(Topic[variable]);
   const beforeBtn = () => {
     if (variable > 0) variable = variable - 1;
@@ -38,4 +38,4 @@ function Relationship() {
   );
 }
 
-export default Relationship;
+export default Friend;
