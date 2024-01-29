@@ -33,6 +33,11 @@
   white-space: pre-line;
 }
 
+.rect:hover {
+  background-color: #000981;
+  color: white;
+}
+
 .rect {
   width: 300px;
   height: 300px;
