@@ -9,7 +9,7 @@ const Topic = [
 
 let variable = 0;
 
-function Relationship() {
+function Icebreaking() {
   const [topic, setTopic] = useState(Topic[variable]);
   const beforeBtn = () => {
     if (variable > 0) variable = variable - 1;
@@ -32,10 +32,10 @@ function Relationship() {
       <button onClick={nextBtn}>next</button>
       <button onClick={reset}>reset</button>
       <p>
-        <Link to="/basic">To Home</Link>
+        <Link to="/category">To Home</Link>
       </p>
     </div>
   );
 }
 
-export default Relationship;
+export default Icebreaking;

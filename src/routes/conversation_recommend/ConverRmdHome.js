@@ -1,5 +1,4 @@
-//converRmd = conversation recommend
-//BaConTopic = Basic Conversation Topic
+//converRmdHome = conversation recommend
 
 import { useNavigate } from "react-router-dom";
 import "./style.css";
@@ -7,9 +6,9 @@ import "./style.css";
 function BaConTopic() {
   const movePage = useNavigate();
 
-  const toRomantic = () => movePage("/basic/romantic");
-  const toRelationship = () => movePage("/basic/relationship");
-  const toIcebreaking = () => movePage("/basic/icebreaking");
+  const toRomantic = () => movePage("/category/romantic");
+  const toRelationship = () => movePage("/category/relationship");
+  const toIcebreaking = () => movePage("/category/icebreaking");
 
   return (
     <div id="basic">
