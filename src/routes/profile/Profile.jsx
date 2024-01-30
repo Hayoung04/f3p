@@ -5,9 +5,9 @@ import styles from "./Profile.module.css";
 function Profile() {
   const navigate = useNavigate();
 
-  const handleContainerClick = () => {
+  const handleContainerClick = (num) => {
     // 클릭 시 Add 페이지로 이동
-    navigate("/addprofile");
+    navigate("/addprofile/" + num);
   };
 
   return (
@@ -17,11 +17,17 @@ function Profile() {
       </div>
       <img className={styles.user} src="image/image02.png" alt="user"></img>
       <h2 className={styles.text}>각 주제에 맞는 사진과 설명을 입력해주세요</h2>
-      <div className={styles.container} onClick={handleContainerClick}>
+      <div className={styles.container}>
         {[...Array(3)].map((_, rowIndex) => (
           <div key={rowIndex} className={styles.row}>
             {[...Array(3)].map((_, colIndex) => (
-              <div key={colIndex} className={styles.rect}>
+              <div
+                key={colIndex}
+                className={styles.rect}
+                onClick={() => {
+                  handleContainerClick(rowIndex * 3 + colIndex + 1);
+                }}
+              >
                 {getContent(rowIndex, colIndex)}
               </div>
             ))}
