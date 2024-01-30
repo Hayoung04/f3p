@@ -8,6 +8,7 @@ import Icebreaking from "./routes/conversation_recommend/Icebreaking";
 import Profile from "./routes/profile/Profile";
 import Write from "./routes/addprofile/Add";
 import Mainpage from "./routes/mainpage/Mainpage";
+import Test from "./test";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Routes>
           <Route path="/addprofile" element={<Write />}></Route>
           <Route path="/" element={<Mainpage />}></Route>
+          <Route path="/test/aaa/bbbb" element={<Test />}></Route>
         </Routes>
       </Router>
     </div>
