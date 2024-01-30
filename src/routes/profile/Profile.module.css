@@ -9,6 +9,16 @@
   font-size: 18px;
 }
 
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Black Han Sans", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 25px;
+  padding-bottom: 20px;
+}
 .user {
   width: 50px;
   height: auto;
@@ -17,7 +27,7 @@
   align-items: center;
   margin: auto;
   padding-top: 60px;
-  padding-bottom: 50px;
+  padding-bottom: 25px;
 }
 
 .container {
