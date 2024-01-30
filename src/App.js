@@ -24,7 +24,7 @@ function App() {
           <Route path="/profile" element={<Profile />}></Route>
         </Routes>
         <Routes>
-          <Route path="/addprofile" element={<Write />}></Route>
+          <Route path="/addprofile/:happy" element={<Write />}></Route>
           <Route path="/" element={<Mainpage />}></Route>
         </Routes>
         <Routes>

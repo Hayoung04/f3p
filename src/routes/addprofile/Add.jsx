@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import styles from "./Add.module.css";
+import { useParams } from "react-router-dom";
 
 const Write = (props) => {
   const [post, setPost] = useState({ title: "", contents: "" }); //useState 사용하여 상태 변수 초기화
   const [file, setFile] = useState(null); //file은 초기에 null로 설정
+  const params = useParams();
+  const id = params.happy;
 
   const changeValue = (e) => {
     setPost({
@@ -24,17 +27,15 @@ const Write = (props) => {
 
     formData.append("image", file);
     formData.append("c_answer", post.contents);
-    formData.append("t_answer", post.test);
+    formData.append("t_answer", post.title);
     formData.append("memberID", 1234);
-    formData.append("q_id", 1);
+    formData.append("q_id", id);
 
-    fetch("https://ll-api.jungsub.com/talk", {
+    fetch("https://ll-api.jungsub.com/talk/mypage/answer", {
       method: "POST",
       body: formData,
-      headers: {
-        "Content-Type": "multipart/form-data",
-      },
-    }).then(() => props.history.push("/"));
+      headers: {},
+    });
   }; //폼 제출을 처리하는 submitPost 함수, 기본 제출 동작 막고 파일과 포스트 데이터 추가. 그리고 fetch사용하여 서버에 POST 요청
 
   return (
