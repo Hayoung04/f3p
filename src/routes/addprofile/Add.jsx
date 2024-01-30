@@ -22,11 +22,13 @@ const Write = (props) => {
     e.preventDefault();
     const formData = new FormData();
 
-    formData.append("file", file);
-    formData.append("post", JSON.stringify(post));
-    //stringify 메소드는 json 객체를 String 객체로 변환시켜 줌
+    formData.append("image", file);
+    formData.append("c_answer", post.contents);
+    formData.append("t_answer", post.test);
+    formData.append("memberID", 1234);
+    formData.append("q_id", 1);
 
-    fetch("https://ll-api.jungsub.com/create", {
+    fetch("https://ll-api.jungsub.com/talk", {
       method: "POST",
       body: formData,
       headers: {

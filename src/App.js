@@ -8,6 +8,7 @@ import Icebreaking from "./routes/conversation_recommend/Icebreaking";
 import Profile from "./routes/profile/Profile";
 import Write from "./routes/addprofile/Add";
 import Mainpage from "./routes/mainpage/Mainpage";
+import Afteradd from "./routes/afteradd/Afteradd";
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
         <Routes>
           <Route path="/addprofile" element={<Write />}></Route>
           <Route path="/" element={<Mainpage />}></Route>
+        </Routes>
+        <Routes>
+          <Route path="/afteradd" element={<Afteradd />}></Route>
         </Routes>
       </Router>
     </div>

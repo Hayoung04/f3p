@@ -5,9 +5,9 @@ import styles from "./Profile.module.css";
 function Profile() {
   const navigate = useNavigate();
 
-  const handleContainerClick = () => {
+  const handleContainerClick = (num) => {
     // 클릭 시 Add 페이지로 이동
-    navigate("/addprofile");
+    navigate("/addprofile" + num);
   };
 
   return (
