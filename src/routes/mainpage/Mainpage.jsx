@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Mainpage.css";
+
 import LoginDialog from "../login/logindialog";
+import IsLogined from "./IsLogined";
 
 const Mainpage = () => {
   return (
@@ -11,20 +13,13 @@ const Mainpage = () => {
         </div>
 
         <ul className="header__menu">
+          {/* 프로필 링크 좌측에 위치한 로그인 창 */}
+          <LoginDialog />
           <li>
-            <a href="#likelionContact-footer" className="profile-link">
-              <LoginDialog />
-              <span className="profile-image">
-                <img
-                  src={`${process.env.PUBLIC_URL}/image/image02.png`}
-                  width="60"
-                  height="60"
-                />
-              </span>
-            </a>
+            {/* 기존에 이미지와 링크를 걸어둔 코드에서 로그인되어 있으면 링크 변화를 줘서 이동하는 사이트 달라지게함, 기존 코드와 달라진점은 if문 추가외에는 없음 */}
+            <IsLogined />
           </li>
         </ul>
-
         <a href="#" className="header__toggleBtn">
           <i className="fa-solid fa-bars"></i>
         </a>

@@ -9,6 +9,15 @@ import DialogTitle from "@mui/material/DialogTitle";
 
 export default function LoginDialog() {
   const [open, setOpen] = React.useState(false);
+  const [id, setId] = React.useState("");
+  const [password, setPassword] = React.useState("");
+
+  const onChangeId = (event) => {
+    setId(event.target.value);
+  };
+  const onChangePW = (event) => {
+    setPassword(event.target.value);
+  };
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -34,6 +43,9 @@ export default function LoginDialog() {
             const formJson = Object.fromEntries(formData.entries());
             const email = formJson.email;
             console.log(email);
+            console.log(id, password);
+            localStorage.setItem("userId", id);
+            localStorage.setItem("userPw", password);
             handleClose();
           },
         }}
@@ -43,13 +55,20 @@ export default function LoginDialog() {
           <DialogContentText>
             <p>Please write your name and password.</p>
           </DialogContentText>
-
-          <TextField id="demo-helper-text-aligned" label="Name" />
+          <TextField
+            id="demo-helper-text-aligned"
+            label="Name"
+            type="text"
+            value={id}
+            onChange={onChangeId}
+          />
           <TextField
             id="outlined-password-input"
             label="Password"
             type="password"
-            autoComplete="current-password"
+            // autoComplete="current-password"
+            value={password}
+            onChange={onChangePW}
           />
         </DialogContent>
         <DialogActions>
@@ -60,3 +79,34 @@ export default function LoginDialog() {
     </React.Fragment>
   );
 }
+
+// import { useState } from "react";
+
+// function LoginForm() {
+//   return (
+//     <div>
+//       <form>
+//         <label htmlFor="id">ID : </label>
+//         <input type="text" id="id" />
+//         <br />
+//         <label htmlFor="passWord">Password : </label>
+//         <input type="password" id="passWord" />
+//         <br />
+//         <button type="submit">Login</button>
+//       </form>
+//     </div>
+//   );
+// }
+
+// export default function LoginDialog() {
+//   const [open, setOpen] = useState(false);
+//   const handleClickOpen = () => {
+//     setOpen(true);
+//     alert(Login);
+//   };
+//   return (
+//     <div>
+//       <button onClick={handleClickOpen}>Login</button>
+//     </div>
+//   );
+// }
