@@ -9,6 +9,15 @@ import DialogTitle from "@mui/material/DialogTitle";
 
 export default function LoginDialog() {
   const [open, setOpen] = React.useState(false);
+  const [id, setId] = React.useState("");
+  const [password, setPassword] = React.useState("");
+
+  const onChangeId = (event) => {
+    setId(event.target.value);
+  };
+  const onChangePW = (event) => {
+    setPassword(event.target.value);
+  };
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -34,6 +43,9 @@ export default function LoginDialog() {
             const formJson = Object.fromEntries(formData.entries());
             const email = formJson.email;
             console.log(email);
+            console.log(id, password);
+            localStorage.setItem("userId", id);
+            localStorage.setItem("userPw", password);
             handleClose();
           },
         }}
@@ -43,13 +55,20 @@ export default function LoginDialog() {
           <DialogContentText>
             <p>Please write your name and password.</p>
           </DialogContentText>
-
-          <TextField id="demo-helper-text-aligned" label="Name" />
+          <TextField
+            id="demo-helper-text-aligned"
+            label="Name"
+            type="text"
+            value={id}
+            onChange={onChangeId}
+          />
           <TextField
             id="outlined-password-input"
             label="Password"
             type="password"
-            autoComplete="current-password"
+            // autoComplete="current-password"
+            value={password}
+            onChange={onChangePW}
           />
         </DialogContent>
         <DialogActions>
