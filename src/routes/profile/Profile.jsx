@@ -16,6 +16,7 @@ function Profile() {
         <h1>Profile page</h1>
       </div>
       <img className={styles.user} src="image/image02.png" alt="user"></img>
+      <h2 className={styles.text}>각 주제에 맞는 사진과 설명을 입력해주세요</h2>
       <div className={styles.container} onClick={handleContainerClick}>
         {[...Array(3)].map((_, rowIndex) => (
           <div key={rowIndex} className={styles.row}>

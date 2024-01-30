@@ -6,7 +6,7 @@ import Friend from "./routes/conversation_recommend/Friend";
 import Icebreaking from "./routes/conversation_recommend/Icebreaking";
 
 import Profile from "./routes/profile/Profile";
-import Add from "./routes/addprofile/Add";
+import Write from "./routes/addprofile/Add";
 import Mainpage from "./routes/mainpage/Mainpage";
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
           <Route path="/profile" element={<Profile />}></Route>
         </Routes>
         <Routes>
-          <Route path="/addprofile" element={<Add />}></Route>
+          <Route path="/addprofile" element={<Write />}></Route>
           <Route path="/" element={<Mainpage />}></Route>
         </Routes>
       </Router>
