@@ -79,34 +79,3 @@ export default function LoginDialog() {
     </React.Fragment>
   );
 }
-
-// import { useState } from "react";
-
-// function LoginForm() {
-//   return (
-//     <div>
-//       <form>
-//         <label htmlFor="id">ID : </label>
-//         <input type="text" id="id" />
-//         <br />
-//         <label htmlFor="passWord">Password : </label>
-//         <input type="password" id="passWord" />
-//         <br />
-//         <button type="submit">Login</button>
-//       </form>
-//     </div>
-//   );
-// }
-
-// export default function LoginDialog() {
-//   const [open, setOpen] = useState(false);
-//   const handleClickOpen = () => {
-//     setOpen(true);
-//     alert(Login);
-//   };
-//   return (
-//     <div>
-//       <button onClick={handleClickOpen}>Login</button>
-//     </div>
-//   );
-// }
