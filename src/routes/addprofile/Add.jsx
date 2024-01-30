@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Add.module.css";
 import { useParams } from "react-router-dom";
 
@@ -44,12 +44,30 @@ const Write = (props) => {
         }
       });
   }; //폼 제출을 처리하는 submitPost 함수, 기본 제출 동작 막고 파일과 포스트 데이터 추가. 그리고 fetch사용하여 서버에 POST 요청
+  const [recapData, setRecapData] = useState({});
+  useEffect(() => {
+    //처음 한번만 실행하기 위해
+    fetch("https://ll-api.jungsub.com/talk/mypage/get/1234", {
+      method: "POST",
+      headers: { "Content-type": "application/json" },
+      body: JSON.stringify({ qid: id }),
+    })
+      .then((data) => data.json())
+      .then((json) => setRecapData(json));
+  }, [id]);
 
   return (
     <div>
       <div className={styles.header}>
         <h1>Profile page</h1>
       </div>
+      {!!recapData.photo && (
+        <div>
+          <img src={"https://ll-api.jungsub.com" + recapData.photo.img_path} />
+          <h2>{recapData.photo.t_answer}</h2>
+          <h3>{recapData.photo.c_answer}</h3>
+        </div>
+      )}
       <form onSubmit={submitPost} className="write-form">
         <label htmlFor="title">제목</label>
         <input type="text" id="title" name="title" onChange={changeValue} />
