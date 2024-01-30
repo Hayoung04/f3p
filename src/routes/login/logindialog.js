@@ -9,6 +9,7 @@ import DialogTitle from "@mui/material/DialogTitle";
 
 export default function LoginDialog() {
   const [open, setOpen] = React.useState(false);
+  const [login, setLogin] = React.useState(false);
   const [id, setId] = React.useState("");
   const [password, setPassword] = React.useState("");
 
@@ -30,7 +31,7 @@ export default function LoginDialog() {
   return (
     <React.Fragment>
       <Button variant="outlined" onClick={handleClickOpen}>
-        Open form dialog
+        {login ? "Logout" : "Login"}
       </Button>
       <Dialog
         open={open}
@@ -39,13 +40,14 @@ export default function LoginDialog() {
           component: "form",
           onSubmit: (event) => {
             event.preventDefault();
-            const formData = new FormData(event.currentTarget);
-            const formJson = Object.fromEntries(formData.entries());
-            const email = formJson.email;
-            console.log(email);
+            // const formData = new FormData(event.currentTarget);
+            // const formJson = Object.fromEntries(formData.entries());
+            // const email = formJson.email;
+            // console.log(email);
             console.log(id, password);
             localStorage.setItem("userId", id);
             localStorage.setItem("userPw", password);
+            setLogin(true);
             handleClose();
           },
         }}
@@ -57,18 +59,18 @@ export default function LoginDialog() {
           </DialogContentText>
           <TextField
             id="demo-helper-text-aligned"
-            label="Name"
             type="text"
             value={id}
             onChange={onChangeId}
+            placeholder="Name"
           />
           <TextField
             id="outlined-password-input"
-            label="Password"
             type="password"
             // autoComplete="current-password"
             value={password}
             onChange={onChangePW}
+            placeholder="Password"
           />
         </DialogContent>
         <DialogActions>
