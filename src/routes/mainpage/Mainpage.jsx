@@ -55,7 +55,7 @@ const Mainpage = () => {
             autoPlay
             loop
           ></video>
-          <div className="massage"> </div>
+
           <div className="text">
             " interesting <br></br>
             <br></br> good <br></br>
@@ -66,14 +66,12 @@ const Mainpage = () => {
 
       <nav className="circle-icons">
         <a href="https://www.google.com" className="circle-icon">
-          {" "}
-          {/* 수정된 부분 */}
-        </a>
-        <a href="https://www.google.com" className="circle-icon">
-          {/* 두 번째 아이콘 */}
-        </a>
-        <a href="https://www.google.com" className="circle-icon">
-          {/* 세 번째 아이콘 */}
+          <img
+            src={`${process.env.PUBLIC_URL}/image/image02.png`}
+            alt="아이콘 이미지"
+            width="100"
+            height="100"
+          />
         </a>
       </nav>
 

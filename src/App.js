@@ -9,6 +9,7 @@ import BalanceGame from "./routes/conver_function2/BalanceGame";
 import RomanticGame from "./routes/conver_function2/RomanticGame";
 import Profile from "./routes/profile/Profile";
 import Mainpage from "./routes/mainpage/Mainpage";
+import Test from "./test";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         </Routes>
         <Routes>
           <Route path="/" element={<Mainpage />}></Route>
+          <Route path="/test/aaa/bbbb" element={<Test />}></Route>
         </Routes>
       </Router>
     </div>

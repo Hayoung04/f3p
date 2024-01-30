@@ -7,18 +7,8 @@
   pointer-events: none;
 }
 .profile-link {
-  font-size: 14px;
   margin-right: 100px;
-  margin-bottom: 55px;
-}
-
-.header__menu li:hover::before {
-  content: "프로필"; /* '프로필'이라는 글씨 추가 */
-  position: absolute;
-  margin-right: 40px;
-  margin-top: 16px;
-  font-size: 15px;
-  color: black;
+  margin-bottom: 0px;
 }
 
 .profile-link {
@@ -26,25 +16,8 @@
   display: inline-block; /* 추가 */
 }
 
-.profile-link .profile-image {
-  position: absolute; /* 추가 */
-  top: 0; /* 추가 */
-  left: 0; /* 추가 */
+.header__menu li:hover:before {
   opacity: 1; /* 추가 */
-  transition: opacity 0.02s ease; /* 추가 */
-}
-
-.profile-link:hover .profile-image {
-  opacity: 0; /* 추가 */
-}
-
-.header__menu li:hover::before {
-  content: "프로필"; /* '프로필'이라는 글씨 추가 */
-  position: absolute;
-  margin-right: 50px;
-  margin-top: 16px;
-  font-size: 15px;
-  color: black;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -61,6 +34,7 @@
     transform: rotate(360deg);
   }
 }
+
 .header {
   background: white;
   width: 100%;
@@ -98,7 +72,6 @@ body {
 .header {
   margin: 0;
   font-family: "JalnanGothic", sans-serif;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -131,14 +104,6 @@ body {
   color: #ffffff;
 }
 
-.header__toogleBtn {
-  display: none;
-  position: absolute;
-  right: 32px;
-  font-size: 24px;
-  color: #fff4bb;
-}
-
 @media screen and (max-width: 768px) {
   .header {
     flex-direction: column;
@@ -154,10 +119,6 @@ body {
   .header__menu li {
     width: 100%;
     text-align: center;
-  }
-
-  .header__toogleBtn {
-    display: block;
   }
 }
 
@@ -209,7 +170,6 @@ body {
 
 /* font-family: 'Noto Sans', sans-serif; */
 
-html,
 body {
   margin: 0;
   max-width: 100%;
@@ -257,14 +217,6 @@ body {
   color: #fff4bb;
 }
 
-.header2__toogleBtn {
-  display: none;
-  position: absolute;
-  right: 32px;
-  font-size: 24px;
-  color: white;
-}
-
 .header2__menu b {
   margin-right: 0.2px; /* 원하는 간격 크기로 조정하세요 */
 }
@@ -284,10 +236,6 @@ body {
   .header2__menu li {
     width: 100%;
     text-align: center;
-  }
-
-  .header2__toogleBtn {
-    display: block;
   }
 }
 
@@ -332,21 +280,11 @@ body {
 }
 .circle-icons {
   position: absolute;
-  margin-top: 190px; /* 아이콘의 수직 위치 조정 */
+  margin-top: 240px; /* 아이콘의 수직 위치 조정 */
   left: 50%; /* 아이콘의 수평 위치 조정 */
   transform: translateX(-50%); /* 아이콘을 가운데로 정렬 */
   display: flex;
   justify-content: center;
-}
-
-.circle-icon {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  background-color: #fff4bb; /* 아이콘의 배경색 */
-  margin: 0 160px; /* 아이콘 간의 간격 조정 */
-  color: #fff; /* 아이콘의 텍스트 색상 */
-  text-decoration: none;
 }
 
 /*그리드시작*/
@@ -357,7 +295,7 @@ body {
   font-size: 20px;
   color: #002a32;
   margin-left: 90px;
-  margin-top: -350px;
+  margin-top: -500px;
 }
 .grid2 {
   margin: 10px;
