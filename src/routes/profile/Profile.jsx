@@ -1,14 +1,22 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./Profile.module.css";
 
 function Profile() {
+  const navigate = useNavigate();
+
+  const handleContainerClick = () => {
+    // 클릭 시 Add 페이지로 이동
+    navigate("/addprofile");
+  };
+
   return (
     <div>
       <div className={styles.header}>
         <h1>Profile page</h1>
       </div>
-      <img className={styles.user} src="img/person.png" alt="user"></img>
-      <div className={styles.container}>
+      <img className={styles.user} src="image/image02.png" alt="user"></img>
+      <div className={styles.container} onClick={handleContainerClick}>
         {[...Array(3)].map((_, rowIndex) => (
           <div key={rowIndex} className={styles.row}>
             {[...Array(3)].map((_, colIndex) => (

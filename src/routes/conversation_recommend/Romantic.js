@@ -32,7 +32,7 @@ function Romantic() {
       <button onClick={nextBtn}>next</button>
       <button onClick={reset}>reset</button>
       <p>
-        <Link to="/basic">To Home</Link>
+        <Link to="/category">To Home</Link>
       </p>
     </div>
   );

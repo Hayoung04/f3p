@@ -1,5 +1,6 @@
 import React from "react";
 import "./Mainpage.css";
+import LoginDialog from "../login/logindialog";
 
 const Mainpage = () => {
   return (
@@ -12,6 +13,7 @@ const Mainpage = () => {
         <ul className="header__menu">
           <li>
             <a href="#likelionContact-footer" className="profile-link">
+              <LoginDialog />
               <span className="profile-image">
                 <img
                   src={`${process.env.PUBLIC_URL}/image/image02.png`}

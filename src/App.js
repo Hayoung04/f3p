@@ -1,34 +1,30 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import BaConTopic from "./routes/conver_function1/BaConTopic";
-import Romantic from "./routes/conver_function1/Romantic";
-import Relationship from "./routes/conver_function1/Relationship";
-import Icebreaking from "./routes/conver_function1/Icebreaking";
+import ConverRmdHome from "./routes/conversation_recommend/ConverRmdHome";
+import Romantic from "./routes/conversation_recommend/Romantic";
+import Friend from "./routes/conversation_recommend/Friend";
+import Icebreaking from "./routes/conversation_recommend/Icebreaking";
 
-import BalanceGame from "./routes/conver_function2/BalanceGame";
-import RomanticGame from "./routes/conver_function2/RomanticGame";
 import Profile from "./routes/profile/Profile";
+import Add from "./routes/addprofile/Add";
 import Mainpage from "./routes/mainpage/Mainpage";
 import Test from "./test";
 
 function App() {
   return (
-    <div id="conversationRecommand">
+    <div id="converRmd">
       <Router>
         <Routes>
-          <Route path="/basic" element={<BaConTopic />}></Route>
-          <Route path="/basic/romantic" element={<Romantic />}></Route>
-          <Route path="/basic/relationship" element={<Relationship />}></Route>
-          <Route path="/basic/icebreaking" element={<Icebreaking />}></Route>
-        </Routes>
-        <Routes>
-          <Route path="/balance" element={<BalanceGame />}></Route>
-          <Route path="/balance/romantic" element={<RomanticGame />}></Route>
+          <Route path="/category" element={<ConverRmdHome />}></Route>
+          <Route path="/category/romantic" element={<Romantic />}></Route>
+          <Route path="/cateegory/friend" element={<Friend />}></Route>
+          <Route path="/category/icebreaking" element={<Icebreaking />}></Route>
         </Routes>
         <Routes>
           <Route path="/profile" element={<Profile />}></Route>
         </Routes>
         <Routes>
+          <Route path="/addprofile" element={<Add />}></Route>
           <Route path="/" element={<Mainpage />}></Route>
           <Route path="/test/aaa/bbbb" element={<Test />}></Route>
         </Routes>
