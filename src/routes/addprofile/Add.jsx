@@ -57,7 +57,9 @@ const Write = (props) => {
         <label htmlFor="file">파일 선택</label>
         <input type="file" id="file" onChange={saveFile} />
 
-        <button type="submit">등록</button>
+        <button type="submit" className={styles.submitBtn}>
+          등록
+        </button>
       </form>
     </div>
   );

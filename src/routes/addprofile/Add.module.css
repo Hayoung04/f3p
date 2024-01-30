@@ -47,11 +47,12 @@ textarea {
 input {
   height: 50px;
 }
-button {
+/* button {
   width: 200px;
-}
+} */
 
-button {
+.submitBtn {
+  width: 200px;
   background-color: #000981;
   color: white;
   border: none;
@@ -64,7 +65,7 @@ button {
   font-size: 15px;
 }
 
-button:hover {
+.submitBtn:hover {
   background-color: #00098177;
   color: #000981;
 }
