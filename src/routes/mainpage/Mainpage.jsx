@@ -62,7 +62,7 @@ const Mainpage = () => {
       </div>
 
       <nav className="circle-icons">
-        <a href="https://www.google.com" className="circle-icon">
+        <a href="/category" className="circle-icon">
           <img
             src={`${process.env.PUBLIC_URL}/image/image02.png`}
             alt="아이콘 이미지"

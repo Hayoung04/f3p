@@ -9,8 +9,6 @@ import Profile from "./routes/profile/Profile";
 import Write from "./routes/addprofile/Add";
 import Mainpage from "./routes/mainpage/Mainpage";
 
-import Afteradd from "./routes/afteradd/Afteradd";
-
 import Test from "./test";
 
 function App() {
@@ -30,9 +28,6 @@ function App() {
           <Route path="/addprofile/:happy" element={<Write />}></Route>
           <Route path="/" element={<Mainpage />}></Route>
           <Route path="/test/aaa/bbbb" element={<Test />}></Route>
-        </Routes>
-        <Routes>
-          <Route path="/afteradd" element={<Afteradd />}></Route>
         </Routes>
       </Router>
     </div>

@@ -5,7 +5,7 @@ export default function IsLogined() {
 
   const isLogin = () => {
     const userId = localStorage.getItem("userId");
-    if (userId !== null) setAddress("/category");
+    if (userId !== null) setAddress("/profile");
     console.log(address);
     console.log(userId);
   };

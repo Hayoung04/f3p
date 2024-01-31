@@ -1,12 +1,12 @@
 /* header 부분 */
-#basic h1 {
+.basic h1 {
   margin: 0;
   padding: 34px;
   font-size: 15px;
 }
 
 /*중간 멘트*/
-#basic h2 {
+.basic h2 {
   text-align: center;
   font-size: 60px;
   padding: 60px 0;
@@ -29,50 +29,25 @@
   background-color: rgb(211, 203, 203);
 }
 /*버튼 레이아웃 배열 css*/
-#category {
+.category {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#section1 {
+.section1 {
   display: flex;
   flex-direction: row;
   align-items: stretch;
   justify-content: center;
 }
-#section1_b {
+.section1_b {
   display: flex;
   flex-direction: column;
   align-items: stretch;
 }
-
-.balanceGame {
-  height: 510px;
-  width: 300px;
+.section1_b_1 {
+  display: flex;
 }
-.if,
-.seriousConver {
-  width: 300px;
-  height: 250px;
-}
-.romantic {
-  height: 250px;
-}
-.friend {
-  width: 605px;
-  height: 250px;
-}
-.icebreaking {
-  width: 305px;
-  height: 250px;
-}
-button {
-  position: relative;
-  margin: 5px 5px 5px 5px;
-  border-radius: 40px;
-  border: none;
-}
-
-button img {
-  width: 100px;
+.section2 {
+  display: flex;
 }
