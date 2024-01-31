@@ -69,3 +69,31 @@ input {
   background-color: #00098177;
   color: #000981;
 }
+
+.upload img {
+  width: 1000px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.upload h2 {
+  font-weight: bold;
+  font-family: "Black Han Sans", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+}
+
+.upload h3 {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
