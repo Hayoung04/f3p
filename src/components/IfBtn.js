@@ -7,11 +7,11 @@ const IfBtn = () => {
 
   return (
     <button onClick={toIf} className={styles.if}>
-      <span className="title">
-        <span className="icon">❔</span>If
+      <span className={styles.title}>
+        <span className={styles.icon}>❔</span>If
       </span>
       <br />
-      <span className="explanation">끝없는 상상력, 과몰입</span>
+      <span className={styles.explanation}>끝없는 상상력, 과몰입</span>
       <img
         src="img/target-dynamic-color.png"
         alt="Friend"

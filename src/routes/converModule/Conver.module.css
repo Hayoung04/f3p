@@ -1,8 +1,13 @@
-/* header 부분 */
-.basic h1 {
-  margin: 0;
-  padding: 34px;
-  font-size: 15px;
+@font-face {
+  font-family: "JalnanGothic";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.basic {
+  font-family: "JalnanGothic", sans-serif;
 }
 
 /*중간 멘트*/
@@ -11,7 +16,7 @@
   font-size: 60px;
   padding: 60px 0;
   margin: 0;
-  border-top: solid #000981;
+  font-weight: 100;
 }
 
 .txtCnt {
@@ -25,6 +30,7 @@
   border: 1px solid black;
   border-radius: 10px;
 }
+
 /*버튼 레이아웃 배열 css*/
 .category {
   display: flex;
