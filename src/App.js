@@ -13,7 +13,6 @@ import Afteradd from "./routes/afteradd/Afteradd";
 
 import Test from "./test";
 
-
 function App() {
   return (
     <div id="converRmd">
@@ -21,7 +20,7 @@ function App() {
         <Routes>
           <Route path="/category" element={<ConverRmdHome />}></Route>
           <Route path="/category/romantic" element={<Romantic />}></Route>
-          <Route path="/cateegory/friend" element={<Friend />}></Route>
+          <Route path="/category/friend" element={<Friend />}></Route>
           <Route path="/category/icebreaking" element={<Icebreaking />}></Route>
         </Routes>
         <Routes>
