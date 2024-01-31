@@ -30,14 +30,25 @@ function Romantic() {
   };
   return (
     <>
-      <div className={styles.basic}>
-        <h1>F3PHER</h1>
-        <div className={styles.rayout1}>
-          <button onClick={beforeBtn}>before</button>
-          <div>{topic}</div>
-          <button onClick={nextBtn}>next</button>
+      <div>
+        <div className={styles.header}>
+          <h1>F3PHER</h1>
         </div>
-        <button onClick={reset}>reset</button>
+
+        <button className={styles.beforeBtn} onClick={beforeBtn}>
+          before
+        </button>
+
+        <div className={styles.topic}>{topic}</div>
+
+        <button className={styles.nextBtn} onClick={nextBtn}>
+          next
+        </button>
+
+        {/* <button className={styles.reset} onClick={reset}>
+          reset
+        </button> */}
+
         <p>
           <Link to="/category">To Home</Link>
         </p>
