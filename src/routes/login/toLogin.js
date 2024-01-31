@@ -7,7 +7,7 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 
-export default function LoginDialog() {
+function toLogin() {
   const [open, setOpen] = React.useState(false);
   const [login, setLogin] = React.useState(false);
   const [id, setId] = React.useState("");
@@ -27,10 +27,7 @@ export default function LoginDialog() {
     setOpen(false);
   };
   return (
-    <React.Fragment>
-      <Button variant="outlined" onClick={handleClickOpen}>
-        {login ? "Logout" : "Login"}
-      </Button>
+    <>
       <Dialog
         open={open}
         onClose={handleClose}
@@ -85,6 +82,8 @@ export default function LoginDialog() {
           <Button type="submit">Login</Button>
         </DialogActions>
       </Dialog>
-    </React.Fragment>
+    </>
   );
 }
+
+export default toLogin;
