@@ -1,23 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+
+@font-face {
+  font-family: "JalnanGothic";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .balanceGame {
   height: 510px;
   width: 300px;
+  font-family: "JalnanGothic", sans-serif;
+  font-size: 20px;
 }
+
 .if,
 .seriousConver {
   width: 300px;
   height: 250px;
+  font-family: "JalnanGothic", sans-serif;
+  font-size: 20px;
 }
 .romantic {
   width: 610px;
   height: 250px;
+  font-family: "JalnanGothic", sans-serif;
+  text-align: center;
+  font-size: 20px;
 }
 .friend {
   width: 605px;
   height: 250px;
+  font-family: "JalnanGothic", sans-serif;
+  font-size: 20px;
 }
 .icebreaking {
   width: 305px;
   height: 250px;
+  font-family: "JalnanGothic", sans-serif;
+  font-size: 20px;
 }
 
 /*공통 css*/
@@ -45,5 +67,31 @@
   /* font-size: 100px; */
 
 .allBtnImg {
-  width: 100px;
+  width: 150px;
+}
+
+.FriendallBtnImg {
+  width: 150px;
+  position: absolute;
+  left: 90px;
+  top: 50px;
+}
+
+.Friendexplanation {
+  position: absolute;
+  left: 270px;
+  top: 140px;
+}
+
+.romanticexplanation {
+  position: absolute;
+  left: 270px;
+  top: 140px;
+}
+
+.romanticallBtnImg {
+  width: 150px;
+  position: absolute;
+  left: 100px;
+  top: 50px;
 }
