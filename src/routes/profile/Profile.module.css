@@ -1,9 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+
+@font-face {
+  font-family: "JalnanGothic";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .header {
   display: flex;
   justify-content: center;
   align-items: center;
   border-bottom: 3px solid #000981;
-  font-family: "Black Han Sans", sans-serif;
+  font-family: "JalnanGothic", sans-serif;
   font-weight: 200;
   font-style: normal;
   font-size: 18px;
@@ -13,7 +23,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Black Han Sans", sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   font-weight: 200;
   font-style: normal;
   font-size: 25px;
@@ -27,7 +37,7 @@
   align-items: center;
   margin: auto;
   padding-top: 60px;
-  padding-bottom: 25px;
+  padding-bottom: 20px;
 }
 
 .container {
@@ -35,9 +45,9 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  font-family: "Black Han Sans", sans-serif;
+  font-family: "JalnanGothic", sans-serif;
   font-weight: 300;
-  font-style: normal;
+  font-style: light;
   font-size: 37px;
   text-align: center;
   white-space: pre-line;

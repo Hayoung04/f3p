@@ -102,7 +102,7 @@ const Write = (props) => {
                 }
               });
           }}
-          className={styles.submitBtn}
+          className={styles.DeleteBtn}
         >
           삭제
         </button>

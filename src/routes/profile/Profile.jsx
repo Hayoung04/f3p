@@ -6,12 +6,11 @@ import styles from "./Profile.module.css";
 
 function Profile() {
   const navigate = useNavigate();
-  const memberId = localStorage.getItem("memberID"); // 이후 선규님한테 받아오기!
+  const memberId = localStorage.getItem("memberID");
 
   const [data, setData] = useState();
   console.log(data);
 
-  // async await 검색!!!!!!
   useEffect(() => {
     fetch("https://ll-api.jungsub.com/talk/mypage/list/" + memberId)
       .then((data) => data.json())
