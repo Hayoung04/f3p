@@ -6,7 +6,7 @@ import styles from "./Profile.module.css";
 
 function Profile() {
   const navigate = useNavigate();
-  const memberId = "1234"; // 이후 선규님한테 받아오기!
+  const memberId = localStorage.getItem("memberID"); // 이후 선규님한테 받아오기!
 
   const [data, setData] = useState();
   console.log(data);
