@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 const Write = (props) => {
   const [post, setPost] = useState({ title: "", contents: "" }); //useState 사용하여 상태 변수 초기화
   const [file, setFile] = useState(null); //file은 초기에 null로 설정
+  const memberID = localStorage.getItem("memberID");
   const params = useParams();
   const id = params.happy;
 
@@ -28,7 +29,7 @@ const Write = (props) => {
     formData.append("image", file);
     formData.append("c_answer", post.contents);
     formData.append("t_answer", post.title);
-    formData.append("memberID", 1234);
+    formData.append("memberID", memberID);
     formData.append("q_id", id);
 
     fetch("https://ll-api.jungsub.com/talk/mypage/answer", {
@@ -47,7 +48,7 @@ const Write = (props) => {
   const [recapData, setRecapData] = useState({});
   useEffect(() => {
     //처음 한번만 실행하기 위해
-    fetch("https://ll-api.jungsub.com/talk/mypage/get/1234", {
+    fetch(`https://ll-api.jungsub.com/talk/mypage/get/${memberID}`, {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify({ qid: id }),

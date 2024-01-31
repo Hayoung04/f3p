@@ -9,12 +9,12 @@ import DialogTitle from "@mui/material/DialogTitle";
 
 export default function LoginDialog() {
   const [open, setOpen] = React.useState(false);
-  const [login, setLogin] = React.useState(false);
-  const [id, setId] = React.useState("");
+  const [name, setName] = React.useState("");
   const [password, setPassword] = React.useState("");
+  const [render, setRender] = React.useState(false);
 
   const onChangeId = (event) => {
-    setId(event.target.value);
+    setName(event.target.value);
   };
   const onChangePW = (event) => {
     setPassword(event.target.value);
@@ -26,10 +26,11 @@ export default function LoginDialog() {
   const handleClose = () => {
     setOpen(false);
   };
+
   return (
     <React.Fragment>
       <Button variant="outlined" onClick={handleClickOpen}>
-        {login ? "Logout" : "Login"}
+        {localStorage.getItem("memberID") ? "Logout" : "Login"}
       </Button>
       <Dialog
         open={open}
@@ -41,7 +42,7 @@ export default function LoginDialog() {
 
             const formData = new FormData();
 
-            formData.append("name", id);
+            formData.append("name", name);
             formData.append("password", password);
 
             fetch("https://ll-api.jungsub.com/talk/login", {
@@ -51,10 +52,9 @@ export default function LoginDialog() {
             })
               .then((data) => data.json())
               .then((json) => {
-                localStorage.setItem("userId", id);
-                localStorage.setItem("userPw", password);
+                localStorage.setItem("memberID", name);
+                setRender((current) => !current);
               });
-            setLogin(true);
             handleClose();
           },
         }}
@@ -67,7 +67,7 @@ export default function LoginDialog() {
           <TextField
             id="demo-helper-text-aligned"
             type="text"
-            value={id}
+            value={name}
             onChange={onChangeId}
             placeholder="Name"
           />
