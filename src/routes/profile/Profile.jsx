@@ -1,14 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./Profile.module.css";
+// import navArrow from "getContent";
+// import navArrowBlue from "../addprofile/styles.upload.img";
 
 function Profile() {
   const navigate = useNavigate();
+  const memberId = "1234"; // 이후 선규님한테 받아오기!
+
+  const [data, setData] = useState();
+  console.log(data);
+
+  // async await 검색!!!!!!
+  useEffect(() => {
+    fetch("https://ll-api.jungsub.com/talk/mypage/list/" + memberId)
+      .then((data) => data.json())
+      .then((json) => setData(json.photos));
+  }, []);
 
   const handleContainerClick = (num) => {
     // 클릭 시 Add 페이지로 이동
     navigate("/addprofile/" + num);
   };
+
+  if (!data) return <>loading...</>;
 
   return (
     <div>
@@ -20,17 +35,31 @@ function Profile() {
       <div className={styles.container}>
         {[...Array(3)].map((_, rowIndex) => (
           <div key={rowIndex} className={styles.row}>
-            {[...Array(3)].map((_, colIndex) => (
-              <div
-                key={colIndex}
-                className={styles.rect}
-                onClick={() => {
-                  handleContainerClick(rowIndex * 3 + colIndex + 1);
-                }}
-              >
-                {getContent(rowIndex, colIndex)}
-              </div>
-            ))}
+            {[...Array(3)].map((_, colIndex) => {
+              const image = data.find(function (elem) {
+                if (elem._id === (rowIndex * 3 + colIndex + 1).toString())
+                  return true;
+              })?.latest.img_path;
+              console.log(image);
+              return (
+                <div
+                  key={colIndex}
+                  className={styles.rect}
+                  onClick={() => {
+                    handleContainerClick(rowIndex * 3 + colIndex + 1);
+                  }}
+                  style={{
+                    "--hover-image": !!image
+                      ? `url("https://ll-api.jungsub.com${image}")`
+                      : "#000981",
+                  }}
+                >
+                  {getContent(rowIndex, colIndex)}{" "}
+                  {/* 물음표가 있으면 전 값이 참일때만 . 뒤에오는 메소드를 실행 */}
+                  {}
+                </div>
+              );
+            })}
           </div>
         ))}
       </div>

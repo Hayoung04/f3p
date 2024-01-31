@@ -44,7 +44,8 @@
 }
 
 .rect:hover {
-  background-color: #000981;
+  /* background-color: #000981; */
+  background: var(--hover-image);
   color: white;
 }
 
