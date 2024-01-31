@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 import styles from "../converModule/DetailCate.module.css";
 
@@ -45,13 +45,11 @@ function Romantic() {
           {">"}
         </button>
 
-        {/* <button className={styles.reset} onClick={reset}>
-          reset
-        </button> */}
-
-        <p>
-          <Link to="/category">To Home</Link>
-        </p>
+        <div className={styles.home}>
+          <p>
+            <a href="/category">⌂</a>
+          </p>
+        </div>
       </div>
     </>
   );
