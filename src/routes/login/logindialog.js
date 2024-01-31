@@ -52,7 +52,7 @@ export default function LoginDialog() {
             })
               .then((data) => data.json())
               .then((json) => {
-                localStorage.setItem("memberID", name);
+                localStorage.setItem("memberID", json.ok._id);
                 setRender((current) => !current);
               });
             handleClose();
