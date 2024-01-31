@@ -31,8 +31,7 @@ label {
 }
 
 input,
-textarea,
-button {
+textarea {
   display: block;
   margin-bottom: 10px;
   padding: 8px;
@@ -47,9 +46,6 @@ textarea {
 input {
   height: 50px;
 }
-/* button {
-  width: 200px;
-} */
 
 .submitBtn {
   width: 200px;
@@ -63,6 +59,8 @@ input {
   font-weight: bold;
   font-style: normal;
   font-size: 15px;
+  margin-bottom: 10px;
+  margin: 0 auto;
 }
 
 .submitBtn:hover {
