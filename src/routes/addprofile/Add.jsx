@@ -62,10 +62,10 @@ const Write = (props) => {
         <h1>Profile page</h1>
       </div>
       {!!recapData.photo && (
-        <div>
-          <img src={"https://ll-api.jungsub.com" + recapData.photo.img_path} />
+        <div className={styles.upload}>
           <h2>{recapData.photo.t_answer}</h2>
           <h3>{recapData.photo.c_answer}</h3>
+          <img src={"https://ll-api.jungsub.com" + recapData.photo.img_path} />
         </div>
       )}
       <form onSubmit={submitPost} className="write-form">
