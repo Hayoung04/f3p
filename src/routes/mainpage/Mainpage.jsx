@@ -33,12 +33,6 @@ const Mainpage = () => {
             <b href="#likelion-members">What?</b>
           </li>
           <li>
-            <b href="#likelionContact-footer">Function</b>
-          </li>
-          <li>
-            <b href="#likelionContact-footer">Introduction</b>
-          </li>
-          <li>
             <b href="#likelionContact-footer">Contact</b>
           </li>
         </ul>
