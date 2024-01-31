@@ -6,7 +6,8 @@ import ToLogout from "./toLogout";
 function logindialog() {
   return (
     <>
-      localStorage.getItem("memberID") ? <ToLogin /> : <ToLogout />
+      <ToLogin />
+      <ToLogout />
     </>
   );
 }

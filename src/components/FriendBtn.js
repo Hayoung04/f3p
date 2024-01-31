@@ -7,11 +7,11 @@ const FriendBtn = () => {
 
   return (
     <button onClick={toFriend} className={styles.friend}>
-      <span className="title">
-        <span className="icon">😎</span>친구
+      <span className={styles.title}>
+        <span className={styles.icon}>😎</span>친구
       </span>
       <br />
-      <span className="explanation">밤새 이어지는 대화</span>
+      <span className={styles.explanation}>밤새 이어지는 대화</span>
       <img
         src="img/thumb-up-dynamic-color.png"
         alt="Friend"

@@ -7,11 +7,11 @@ const BalanceBtn = () => {
 
   return (
     <button onClick={toBalanceGame} className={styles.balanceGame}>
-      <span className="title">
-        <span className="icon">🆚</span>밸런스게임
+      <span className={styles.title}>
+        <span className={styles.icon}>🆚</span>밸런스게임
       </span>
       <br />
-      <span className="explanation">양보할 수 없는 싸움</span>
+      <span className={styles.explanation}>양보할 수 없는 싸움</span>
       <img
         src="/img/bookmark-fav-dynamic-gradient.png"
         alt="BalanceGame"

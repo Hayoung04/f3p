@@ -7,12 +7,14 @@ import SeriousConverBtn from "../../components/SeriousConverBtn";
 import BalanceBtn from "../../components/BalanceBtn";
 import IfBtn from "../../components/IfBtn";
 
+import LoginDialog from "../login/logindialog";
+import IsLogined from "../mainpage/IsLogined";
+
 import styles from "../converModule/Conver.module.css";
 
 function ConverRmdHome() {
   return (
     <div className={styles.basic}>
-      <h1>F3PHER</h1>
       <h2>
         나의 상황에 맞는 <br />
         카테고리를 골라보세요
