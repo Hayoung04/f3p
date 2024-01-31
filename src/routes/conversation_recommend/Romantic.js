@@ -24,10 +24,10 @@ function Romantic() {
     setTopic(Topic[variable]);
     console.log(variable);
   };
-  const reset = () => {
-    variable = 0;
-    setTopic(Topic[variable]);
-  };
+  // const reset = () => {
+  //   variable = 0;
+  //   setTopic(Topic[variable]);
+  // };
   return (
     <>
       <div>

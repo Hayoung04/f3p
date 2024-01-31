@@ -55,7 +55,7 @@ const Write = (props) => {
     })
       .then((data) => data.json())
       .then((json) => setRecapData(json));
-  }, [id]);
+  }, [memberID, id]);
 
   return (
     <div>
@@ -66,7 +66,10 @@ const Write = (props) => {
         <div className={styles.upload}>
           <h2>{recapData.photo.t_answer}</h2>
           <h3>{recapData.photo.c_answer}</h3>
-          <img src={"https://ll-api.jungsub.com" + recapData.photo.img_path} />
+          <img
+            src={"https://ll-api.jungsub.com" + recapData.photo.img_path}
+            alt="img"
+          />
         </div>
       )}
       <form onSubmit={submitPost} className="write-form">
@@ -88,7 +91,7 @@ const Write = (props) => {
         </button>
         <button
           onClick={function () {
-            const url = "https://ll-api.jungsub.com/talk/mypage/delete/" + id;
+            // const url = "https://ll-api.jungsub.com/talk/mypage/delete/" + id;
             fetch(`https://ll-api.jungsub.com/talk/mypage/delete/${id}`, {
               method: "POST",
               headers: { "Content-type": "application/json" },

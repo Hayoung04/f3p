@@ -7,9 +7,6 @@ import SeriousConverBtn from "../../components/SeriousConverBtn";
 import BalanceBtn from "../../components/BalanceBtn";
 import IfBtn from "../../components/IfBtn";
 
-import LoginDialog from "../login/logindialog";
-import IsLogined from "../mainpage/IsLogined";
-
 import styles from "../converModule/Conver.module.css";
 
 function ConverRmdHome() {
