@@ -7,14 +7,14 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 
-function toLogin() {
+export default function ToLogin() {
   const [open, setOpen] = React.useState(false);
-  const [login, setLogin] = React.useState(false);
-  const [id, setId] = React.useState("");
+  const [name, setName] = React.useState("");
   const [password, setPassword] = React.useState("");
+  const [render, setRender] = React.useState(false);
 
   const onChangeId = (event) => {
-    setId(event.target.value);
+    setName(event.target.value);
   };
   const onChangePW = (event) => {
     setPassword(event.target.value);
@@ -26,8 +26,12 @@ function toLogin() {
   const handleClose = () => {
     setOpen(false);
   };
+
   return (
-    <>
+    <React.Fragment>
+      <Button variant="outlined" onClick={handleClickOpen}>
+        {localStorage.getItem("memberID") ? "Logout" : "Login"}
+      </Button>
       <Dialog
         open={open}
         onClose={handleClose}
@@ -38,7 +42,7 @@ function toLogin() {
 
             const formData = new FormData();
 
-            formData.append("name", id);
+            formData.append("name", name);
             formData.append("password", password);
 
             fetch("https://ll-api.jungsub.com/talk/login", {
@@ -48,10 +52,9 @@ function toLogin() {
             })
               .then((data) => data.json())
               .then((json) => {
-                localStorage.setItem("userId", id);
-                localStorage.setItem("userPw", password);
+                localStorage.setItem("memberID", json.ok._id);
+                setRender((current) => !current);
               });
-            setLogin(true);
             handleClose();
           },
         }}
@@ -64,7 +67,7 @@ function toLogin() {
           <TextField
             id="demo-helper-text-aligned"
             type="text"
-            value={id}
+            value={name}
             onChange={onChangeId}
             placeholder="Name"
           />
@@ -82,8 +85,6 @@ function toLogin() {
           <Button type="submit">Login</Button>
         </DialogActions>
       </Dialog>
-    </>
+    </React.Fragment>
   );
 }
-
-export default toLogin;
