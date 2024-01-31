@@ -47,6 +47,7 @@
   /* background-color: #000981; */
   background: var(--hover-image);
   color: white;
+  text-shadow: 1px 1px 4px black;
 }
 
 .rect {
