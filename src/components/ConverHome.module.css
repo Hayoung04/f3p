@@ -22,8 +22,8 @@
 
 /*공통 css*/
 
-.title {
-}
+/* .title {
+} */
 
 .balanceGame,
 .friend,
@@ -36,11 +36,14 @@
   border-radius: 40px;
 }
 
-.balanceGame,
+/* .balanceGame,
 .friend,
 .icebreaking,
 .if,
 .romantic,
 .seriousConver {
   /* font-size: 100px; */
+
+.allBtnImg {
+  width: 100px;
 }
