@@ -266,11 +266,35 @@ body {
   /* 필요에 따라 애니메이션 속성 추가 */
 }
 
-.video-background .text {
+.video-background .text1 {
+  position: absolute;
+  top: 25%;
+  left: 10%;
+
+  z-index: 1;
+  font-family: "JalnanGothic", sans-serif;
+  font-size: 90px;
+  color: #ffffff;
+  /* 텍스트에 대한 스타일 속성들 */
+  /* 필요에 따라 애니메이션 속성 추가 */
+}
+.video-background .text2 {
   position: absolute;
   top: 50%;
+  left: 40%;
+
+  z-index: 1;
+  font-family: "JalnanGothic", sans-serif;
+  font-size: 90px;
+  color: #ffffff;
+  /* 텍스트에 대한 스타일 속성들 */
+  /* 필요에 따라 애니메이션 속성 추가 */
+}
+.video-background .text3 {
+  position: absolute;
+  top: 75%;
   left: 50%;
-  transform: translate(-50%, -50%);
+
   z-index: 1;
   font-family: "JalnanGothic", sans-serif;
   font-size: 90px;
