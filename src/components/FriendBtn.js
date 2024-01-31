@@ -11,11 +11,11 @@ const FriendBtn = () => {
         <span className={styles.icon}>😎</span>친구
       </span>
       <br />
-      <span className={styles.explanation}>밤새 이어지는 대화</span>
+      <span className={styles.Friendexplanation}>밤새 이어지는 대화</span>
       <img
         src="img/thumb-up-dynamic-color.png"
         alt="Friend"
-        className={styles.allBtnImg}
+        className={styles.FriendallBtnImg}
       />
     </button>
   );
