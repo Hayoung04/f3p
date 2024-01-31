@@ -24,7 +24,7 @@ function ConverRmdHome() {
         <br />
         <span>#대화가 필요하다면?</span>
         <span>#삭막한 분위기가 힘들다면?</span>
-        <span>#F3PHER과 함께</span>
+        <span>#F3PHREEP과 함께</span>
       </div>
       <div className={styles.category}>
         <div className={styles.section1}>

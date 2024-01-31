@@ -47,7 +47,7 @@ function Romantic() {
 
         <div className={styles.home}>
           <p>
-            <a href="/category">⌂</a>
+            <a href="/">⌂</a>
           </p>
         </div>
       </div>

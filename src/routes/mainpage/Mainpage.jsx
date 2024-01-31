@@ -60,7 +60,7 @@ const Mainpage = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          height: "100vh",
+          height: "auto",
         }}
       >
         <div>
@@ -68,7 +68,7 @@ const Mainpage = () => {
             style={{
               backgroundColor: "white",
               width: "100%",
-              height: "650px",
+              height: "80px",
               fontSize: "80px",
               display: "inline-block",
             }}
