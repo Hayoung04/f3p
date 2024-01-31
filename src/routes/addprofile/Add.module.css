@@ -48,6 +48,8 @@ input {
 }
 
 .submitBtn {
+  display: block;
+  margin: 0 auto;
   width: 200px;
   background-color: #000981;
   color: white;
