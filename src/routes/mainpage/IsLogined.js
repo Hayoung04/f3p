@@ -5,7 +5,7 @@ export default function IsLogined() {
   const [render, setRender] = useState(false);
 
   const isLogin = () => {
-    if (!localStorage.getItem("memberID")) alert("please login");
+    if (!localStorage.getItem("memberID")) alert("Please login");
     setRender((current) => !current);
   };
   return (

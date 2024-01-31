@@ -9,7 +9,7 @@
 }
 
 .balanceGame {
-  height: 510px;
+  height: 520px;
   width: 300px;
   font-family: "JalnanGothic", sans-serif;
   font-size: 20px;
@@ -23,30 +23,26 @@
   font-size: 20px;
 }
 .romantic {
-  width: 610px;
+  width: 620px;
   height: 250px;
   font-family: "JalnanGothic", sans-serif;
   text-align: center;
   font-size: 20px;
 }
 .friend {
-  width: 605px;
+  width: 610px;
   height: 250px;
   font-family: "JalnanGothic", sans-serif;
   font-size: 20px;
 }
 .icebreaking {
-  width: 305px;
+  width: 310px;
   height: 250px;
   font-family: "JalnanGothic", sans-serif;
   font-size: 20px;
 }
 
 /*공통 css*/
-
-/* .title {
-} */
-
 .balanceGame,
 .friend,
 .icebreaking,
@@ -54,17 +50,9 @@
 .romantic,
 .seriousConver {
   position: relative;
-  margin: 5px 5px 5px 5px;
+  margin: 10px;
   border-radius: 40px;
 }
-
-/* .balanceGame,
-.friend,
-.icebreaking,
-.if,
-.romantic,
-.seriousConver {
-  /* font-size: 100px; */
 
 .allBtnImg {
   width: 150px;
@@ -81,12 +69,14 @@
   position: absolute;
   left: 270px;
   top: 140px;
+  font-weight: 100;
 }
 
 .romanticexplanation {
   position: absolute;
   left: 270px;
   top: 140px;
+  font-weight: 100;
 }
 
 .romanticallBtnImg {
@@ -94,4 +84,8 @@
   position: absolute;
   left: 100px;
   top: 50px;
+}
+
+.explanation {
+  font-weight: 100;
 }

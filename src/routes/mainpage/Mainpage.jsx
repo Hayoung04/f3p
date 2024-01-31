@@ -13,14 +13,14 @@ const Mainpage = () => {
       <nav className="header">
         <div className="header__logo">FTHREEP</div>
 
-        <ul className="header__menu">
+        <div className="header__menu">
           {/* 프로필 링크 좌측에 위치한 로그인 창 */}
+
           <LoginDialog />
-          <li>
-            {/* 기존에 이미지와 링크를 걸어둔 코드에서 로그인되어 있으면 링크 변화를 줘서 이동하는 사이트 달라지게함, 기존 코드와 달라진점은 if문 추가외에는 없음 */}
-            <IsLogined />
-          </li>
-        </ul>
+
+          {/* 기존에 이미지와 링크를 걸어둔 코드에서 로그인되어 있으면 링크 변화를 줘서 이동하는 사이트 달라지게함, 기존 코드와 달라진점은 if문 추가외에는 없음 */}
+          <IsLogined />
+        </div>
         <div className="header__toggleBtn">
           <i className="fa-solid fa-bars"></i>
         </div>
@@ -60,7 +60,7 @@ const Mainpage = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          height: "100vh",
+          height: "auto",
         }}
       >
         <div>
@@ -68,7 +68,7 @@ const Mainpage = () => {
             style={{
               backgroundColor: "white",
               width: "100%",
-              height: "650px",
+              height: "80px",
               fontSize: "80px",
               display: "inline-block",
             }}
