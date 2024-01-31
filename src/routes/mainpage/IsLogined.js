@@ -4,10 +4,10 @@ export default function IsLogined() {
   const [address, setAddress] = useState("#");
 
   const isLogin = () => {
-    const userId = localStorage.getItem("userId");
-    if (userId !== null) setAddress("/profile");
+    const memberID = localStorage.getItem("memberID");
+    if (memberID !== null) setAddress("/profile");
     console.log(address);
-    console.log(userId);
+    console.log(memberID);
   };
   return (
     <>
