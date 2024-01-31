@@ -7,17 +7,17 @@ import SeriousConverBtn from "../../components/SeriousConverBtn";
 import BalanceBtn from "../../components/BalanceBtn";
 import IfBtn from "../../components/IfBtn";
 
-import "./style.css";
+import styles from "../converModule/Conver.module.css";
 
 function ConverRmdHome() {
   return (
-    <div id="basic">
+    <div className={styles.basic}>
       <h1>F3PHER</h1>
       <h2>
         나의 상황에 맞는 <br />
         카테고리를 골라보세요
       </h2>
-      <div className="txtCnt">
+      <div className={styles.txtCnt}>
         <span>#연애</span>
         <span>#소개팅</span>
         <span>#친구</span>
@@ -27,18 +27,18 @@ function ConverRmdHome() {
         <span>#삭막한 분위기가 힘들다면?</span>
         <span>#F3PHER과 함께</span>
       </div>
-      <div id="category">
-        <div id="section1">
+      <div className={styles.category}>
+        <div className={styles.section1}>
           <BalanceBtn />
-          <div id="section1_b">
-            <div id="section1_b_1">
+          <div className={styles.section1_b}>
+            <div className={styles.section1_b_1}>
               <IfBtn />
               <SeriousConverBtn />
             </div>
             <RomanticBtn />
           </div>
         </div>
-        <div id="section2">
+        <div className={styles.section2}>
           <FriendBtn />
           <IcebreakingBtn />
         </div>

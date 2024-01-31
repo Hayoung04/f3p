@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Add.module.css";
+import { useParams } from "react-router-dom";
 
 const Write = (props) => {
   const [post, setPost] = useState({ title: "", contents: "" }); //useState 사용하여 상태 변수 초기화
   const [file, setFile] = useState(null); //file은 초기에 null로 설정
+  const memberID = localStorage.getItem("memberID");
+  const params = useParams();
+  const id = params.happy;
 
   const changeValue = (e) => {
     setPost({
@@ -22,24 +26,49 @@ const Write = (props) => {
     e.preventDefault();
     const formData = new FormData();
 
-    formData.append("file", file);
-    formData.append("post", JSON.stringify(post));
-    //stringify 메소드는 json 객체를 String 객체로 변환시켜 줌
+    formData.append("image", file);
+    formData.append("c_answer", post.contents);
+    formData.append("t_answer", post.title);
+    formData.append("memberID", memberID);
+    formData.append("q_id", id);
 
-    fetch("https://ll-api.jungsub.com/create", {
+    fetch("https://ll-api.jungsub.com/talk/mypage/answer", {
       method: "POST",
       body: formData,
-      headers: {
-        "Content-Type": "multipart/form-data",
-      },
-    }).then(() => props.history.push("/"));
+      headers: {},
+    })
+      .then((response) => response.json())
+      .then((json) => {
+        console.log(json.ok);
+        if (!!json.ok) {
+          window.location.reload();
+        }
+      });
   }; //폼 제출을 처리하는 submitPost 함수, 기본 제출 동작 막고 파일과 포스트 데이터 추가. 그리고 fetch사용하여 서버에 POST 요청
+  const [recapData, setRecapData] = useState({});
+  useEffect(() => {
+    //처음 한번만 실행하기 위해
+    fetch(`https://ll-api.jungsub.com/talk/mypage/get/${memberID}`, {
+      method: "POST",
+      headers: { "Content-type": "application/json" },
+      body: JSON.stringify({ qid: id }),
+    })
+      .then((data) => data.json())
+      .then((json) => setRecapData(json));
+  }, [id]);
 
   return (
     <div>
       <div className={styles.header}>
         <h1>Profile page</h1>
       </div>
+      {!!recapData.photo && (
+        <div className={styles.upload}>
+          <h2>{recapData.photo.t_answer}</h2>
+          <h3>{recapData.photo.c_answer}</h3>
+          <img src={"https://ll-api.jungsub.com" + recapData.photo.img_path} />
+        </div>
+      )}
       <form onSubmit={submitPost} className="write-form">
         <label htmlFor="title">제목</label>
         <input type="text" id="title" name="title" onChange={changeValue} />
@@ -54,7 +83,29 @@ const Write = (props) => {
         <label htmlFor="file">파일 선택</label>
         <input type="file" id="file" onChange={saveFile} />
 
-        <button type="submit">등록</button>
+        <button type="submit" className={styles.submitBtn}>
+          등록
+        </button>
+        <button
+          onClick={function () {
+            const url = "https://ll-api.jungsub.com/talk/mypage/delete/" + id;
+            fetch(`https://ll-api.jungsub.com/talk/mypage/delete/${id}`, {
+              method: "POST",
+              headers: { "Content-type": "application/json" },
+              body: JSON.stringify({ memberID: memberID }),
+            })
+              .then((response) => response.json())
+              .then((json) => {
+                console.log(json.ok);
+                if (!!json.ok) {
+                  window.location.reload();
+                }
+              });
+          }}
+          className={styles.DeleteBtn}
+        >
+          삭제
+        </button>
       </form>
     </div>
   );
