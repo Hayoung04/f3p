@@ -11,8 +11,6 @@ export default function ToLogin() {
   const [open, setOpen] = React.useState(false);
   const [name, setName] = React.useState("");
   const [password, setPassword] = React.useState("");
-  // eslint-disable-next-line no-unused-vars
-  const [render, setRender] = React.useState(false);
 
   const onChangeId = (event) => {
     setName(event.target.value);
@@ -31,7 +29,7 @@ export default function ToLogin() {
   return (
     <React.Fragment>
       <Button variant="outlined" onClick={handleClickOpen}>
-        {localStorage.getItem("memberID") ? "Logout" : "Login"}
+        Login
       </Button>
       <Dialog
         open={open}
@@ -54,7 +52,6 @@ export default function ToLogin() {
               .then((data) => data.json())
               .then((json) => {
                 localStorage.setItem("memberID", json.ok._id);
-                setRender((current) => !current);
               });
             handleClose();
           },
