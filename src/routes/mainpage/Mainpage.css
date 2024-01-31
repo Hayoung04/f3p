@@ -124,15 +124,6 @@ body {
 
 /*배너 */
 
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -191,21 +182,11 @@ body {
   padding: 0.002px px;
 }
 
-.header2__logo {
-  font-size: 32px;
-}
-
-.header2__logo img {
-  vertical-align: middle;
-  height: 40px;
-  padding-right: 10px;
-}
-
 .header2__menu {
   display: flex;
   font-size: 17px;
   list-style: none;
-  padding-left: 0;
+  padding-left: 50px;
   margin-right: auto;
 }
 
@@ -253,23 +234,11 @@ body {
   height: 100%;
   object-fit: cover;
 }
-.video-background .massage {
-  position: absolute;
-  top: 36%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  font-family: "JalnanGothic", sans-serif;
-  font-size: 10px;
-  color: #ffffff;
-  /* 텍스트에 대한 스타일 속성들 */
-  /* 필요에 따라 애니메이션 속성 추가 */
-}
 
 .video-background .text1 {
   position: absolute;
   top: 25%;
-  left: 10%;
+  left: 3%;
 
   z-index: 1;
   font-family: "JalnanGothic", sans-serif;
@@ -281,7 +250,7 @@ body {
 .video-background .text2 {
   position: absolute;
   top: 50%;
-  left: 40%;
+  left: 35%;
 
   z-index: 1;
   font-family: "JalnanGothic", sans-serif;
@@ -302,41 +271,7 @@ body {
   /* 텍스트에 대한 스타일 속성들 */
   /* 필요에 따라 애니메이션 속성 추가 */
 }
-.circle-icons {
-  position: absolute;
-  margin-top: 240px; /* 아이콘의 수직 위치 조정 */
-  left: 50%; /* 아이콘의 수평 위치 조정 */
-  transform: translateX(-50%); /* 아이콘을 가운데로 정렬 */
-  display: flex;
-  justify-content: center;
-}
 
-/*그리드시작*/
-.grid1 {
-  margin: 10px;
-  padding: 20px;
-  font-family: "JalnanGothic", sans-serif;
-  font-size: 20px;
-  color: #002a32;
-  margin-left: 90px;
-  margin-top: -500px;
-}
-.grid2 {
-  margin: 10px;
-  padding: 20px;
-  font-family: "JalnanGothic", sans-serif;
-  font-size: 20px;
-  color: #002a32;
-  margin-left: 800px;
-}
-.grid3 {
-  margin: 10px;
-  padding: 20px;
-  font-family: "JalnanGothic", sans-serif;
-  font-size: 20px;
-  color: #002a32;
-  margin-left: 90px;
-}
 /*footer*/
 .footer {
   border: 5px solid;
