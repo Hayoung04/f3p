@@ -32,16 +32,19 @@ const Mainpage = () => {
       <nav className="header2">
         <ul className="header2__menu">
           <li>
-            <b href="#likelion-banner">about</b>
+            <b href="#likelion-banner">Home</b>
           </li>
           <li>
-            <b href="#likelion-members">what?</b>
+            <b href="#likelion-members">What?</b>
           </li>
           <li>
-            <b href="#likelionContact-footer">when?</b>
+            <b href="#likelionContact-footer">Function</b>
           </li>
           <li>
-            <b href="#likelionContact-footer">when?</b>
+            <b href="#likelionContact-footer">Introduction</b>
+          </li>
+          <li>
+            <b href="#likelionContact-footer">Contact</b>
           </li>
         </ul>
 
@@ -57,12 +60,9 @@ const Mainpage = () => {
             autoPlay
             loop
           ></video>
-
-          <div className="text">
-            " interesting <br></br>
-            <br></br> good <br></br>
-            <br></br> conversation "
-          </div>
+          <div className="text1">" interesting</div>
+          <div className="text2"> and smooth </div>
+          <div className="text3"> conversation "</div>
         </div>
       </div>
 
