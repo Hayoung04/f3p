@@ -55,7 +55,7 @@ const Write = (props) => {
     })
       .then((data) => data.json())
       .then((json) => setRecapData(json));
-  }, [id, memberID]);
+  }, [memberID, id]);
 
   return (
     <div>

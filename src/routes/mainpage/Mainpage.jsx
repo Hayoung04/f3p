@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+/* eslint-disable jsx-a11y/no-distracting-elements */
+import React from "react";
 import "./Mainpage.css";
 
 import LoginDialog from "../login/logindialog";
@@ -10,9 +11,7 @@ const Mainpage = () => {
   return (
     <div className="app">
       <nav className="header">
-        <div className="header__logo">
-          <a href="#">FTHREEP</a>
-        </div>
+        <div className="header__logo">FTHREEP</div>
 
         <ul className="header__menu">
           {/* 프로필 링크 좌측에 위치한 로그인 창 */}
@@ -22,9 +21,9 @@ const Mainpage = () => {
             <IsLogined />
           </li>
         </ul>
-        <a href="#" className="header__toggleBtn">
+        <div className="header__toggleBtn">
           <i className="fa-solid fa-bars"></i>
-        </a>
+        </div>
       </nav>
       <nav className="header2">
         <ul className="header2__menu">
@@ -39,9 +38,9 @@ const Mainpage = () => {
           </li>
         </ul>
 
-        <a href="#" className="header2__toggleBtn">
+        <div href="#" className="header2__toggleBtn">
           <i className="fa-solid fa-bars"></i>
-        </a>
+        </div>
       </nav>
       <div class="container">
         <div className="video-background">
