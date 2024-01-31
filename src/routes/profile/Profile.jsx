@@ -15,7 +15,7 @@ function Profile() {
     fetch("https://ll-api.jungsub.com/talk/mypage/list/" + memberId)
       .then((data) => data.json())
       .then((json) => setData(json.photos));
-  }, []);
+  }, [memberId]);
 
   const handleContainerClick = (num) => {
     // 클릭 시 Add 페이지로 이동
@@ -35,6 +35,7 @@ function Profile() {
         {[...Array(3)].map((_, rowIndex) => (
           <div key={rowIndex} className={styles.row}>
             {[...Array(3)].map((_, colIndex) => {
+              // eslint-disable-next-line array-callback-return
               const image = data.find(function (elem) {
                 if (elem._id === (rowIndex * 3 + colIndex + 1).toString())
                   return true;

@@ -24,10 +24,10 @@ function Romantic() {
     setTopic(Topic[variable]);
     console.log(variable);
   };
-  const reset = () => {
-    variable = 0;
-    setTopic(Topic[variable]);
-  };
+  // const reset = () => {
+  //   variable = 0;
+  //   setTopic(Topic[variable]);
+  // };
   return (
     <>
       <div>
@@ -36,13 +36,13 @@ function Romantic() {
         </div>
 
         <button className={styles.beforeBtn} onClick={beforeBtn}>
-          before
+          {"<"}
         </button>
 
         <div className={styles.topic}>{topic}</div>
 
         <button className={styles.nextBtn} onClick={nextBtn}>
-          next
+          {">"}
         </button>
 
         {/* <button className={styles.reset} onClick={reset}>
