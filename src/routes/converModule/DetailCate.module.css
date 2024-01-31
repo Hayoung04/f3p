@@ -71,9 +71,7 @@
   font-weight: bold;
   font-style: normal;
   font-size: 55px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   padding-top: 200px;
 }
 
@@ -88,4 +86,26 @@
 
 .home a:hover {
   color: #000981;
+}
+.txtCnt {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 80px;
+  display: inline-block;
+  margin: 20px 30px;
+  padding: 5px 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.txtCntF {
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+  margin-bottom: 80px;
+  display: inline-block;
+  margin: 20px 30px;
+  padding: 5px 10px;
+  border: 1px solid black;
+  border-radius: 10px;
 }

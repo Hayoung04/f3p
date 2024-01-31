@@ -3,7 +3,7 @@ import styles from "./ConverHome.module.css";
 
 const FriendBtn = () => {
   const movePage = useNavigate();
-  const toFriend = () => movePage("/category/friend");
+  const toFriend = () => movePage("/friend");
 
   return (
     <button onClick={toFriend} className={styles.friend}>

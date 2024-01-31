@@ -1,6 +1,4 @@
 import { useState } from "react";
-// import { Link } from "react-router-dom";
-
 import styles from "../converModule/DetailCate.module.css";
 
 const Topic = [
@@ -24,10 +22,6 @@ function Romantic() {
     setTopic(Topic[variable]);
     console.log(variable);
   };
-  // const reset = () => {
-  //   variable = 0;
-  //   setTopic(Topic[variable]);
-  // };
   return (
     <>
       <div>

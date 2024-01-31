@@ -3,7 +3,7 @@ import styles from "./ConverHome.module.css";
 
 const IcebreakingBtn = () => {
   const movePage = useNavigate();
-  const toIcebreaking = () => movePage("/category/relationship");
+  const toIcebreaking = () => movePage("/icebreaking");
 
   return (
     <button onClick={toIcebreaking} className={styles.icebreaking}>

@@ -25,9 +25,7 @@
   border: 1px solid black;
   border-radius: 10px;
 }
-.txtCnt :hover {
-  background-color: rgb(211, 203, 203);
-}
+
 /*버튼 레이아웃 배열 css*/
 .category {
   display: flex;
