@@ -86,6 +86,26 @@ const Write = (props) => {
         <button type="submit" className={styles.submitBtn}>
           등록
         </button>
+        <button
+          onClick={function () {
+            const url = "https://ll-api.jungsub.com/talk/mypage/delete/" + id;
+            fetch(`https://ll-api.jungsub.com/talk/mypage/delete/${id}`, {
+              method: "POST",
+              headers: { "Content-type": "application/json" },
+              body: JSON.stringify({ memberID: memberID }),
+            })
+              .then((response) => response.json())
+              .then((json) => {
+                console.log(json.ok);
+                if (!!json.ok) {
+                  window.location.reload();
+                }
+              });
+          }}
+          className={styles.submitBtn}
+        >
+          삭제
+        </button>
       </form>
     </div>
   );
