@@ -4,6 +4,8 @@ import "./Mainpage.css";
 import LoginDialog from "../login/logindialog";
 import IsLogined from "./IsLogined";
 
+import ConverRmdHome from "../conversation_recommend/ConverRmdHome";
+
 const Mainpage = () => {
   return (
     <div className="app">
@@ -54,8 +56,6 @@ const Mainpage = () => {
           <div className="text3"> conversation "</div>
         </div>
       </div>
-
-
       <div
         style={{
           display: "flex",
@@ -84,7 +84,7 @@ const Mainpage = () => {
           </marquee>
         </div>
       </div>
-
+      <ConverRmdHome />
       <div class="footer">
         <span id="title-footer">FTHREEP</span>
 
