@@ -3,7 +3,7 @@ import styles from "./ConverHome.module.css";
 
 const SeriousConverBtn = () => {
   const movePage = useNavigate();
-  const toSeriousConver = () => movePage("/category/relationship");
+  const toSeriousConver = () => movePage("/seriousconversation");
 
   return (
     <button onClick={toSeriousConver} className={styles.seriousConver}>

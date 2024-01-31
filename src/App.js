@@ -4,6 +4,9 @@ import ConverRmdHome from "./routes/conversation_recommend/ConverRmdHome";
 import Romantic from "./routes/conversation_recommend/Romantic";
 import Friend from "./routes/conversation_recommend/Friend";
 import Icebreaking from "./routes/conversation_recommend/Icebreaking";
+import Balance from "./routes/conversation_recommend/Balance";
+import If from "./routes/conversation_recommend/If";
+import Serious from "./routes/conversation_recommend/SeriousConver";
 
 import Profile from "./routes/profile/Profile";
 import Write from "./routes/addprofile/Add";
@@ -16,10 +19,12 @@ function App() {
     <div id="converRmd">
       <Router>
         <Routes>
-          <Route path="/category" element={<ConverRmdHome />}></Route>
-          <Route path="/category/romantic" element={<Romantic />}></Route>
-          <Route path="/category/friend" element={<Friend />}></Route>
-          <Route path="/category/icebreaking" element={<Icebreaking />}></Route>
+          <Route path="/romantic" element={<Romantic />}></Route>
+          <Route path="/friend" element={<Friend />}></Route>
+          <Route path="/icebreaking" element={<Icebreaking />}></Route>
+          <Route path="/seriousconversation" element={<Serious />}></Route>
+          <Route path="/balancegame" element={<Balance />}></Route>
+          <Route path="/if" element={<If />}></Route>
         </Routes>
         <Routes>
           <Route path="/profile" element={<Profile />}></Route>

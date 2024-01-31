@@ -3,7 +3,7 @@ import styles from "./ConverHome.module.css";
 
 const IfBtn = () => {
   const movePage = useNavigate();
-  const toIf = () => movePage("/category/if");
+  const toIf = () => movePage("/if");
 
   return (
     <button onClick={toIf} className={styles.if}>

@@ -3,7 +3,7 @@ import styles from "./ConverHome.module.css";
 
 const RomanticBtn = () => {
   const movePage = useNavigate();
-  const toRomantic = () => movePage("/category/romantic");
+  const toRomantic = () => movePage("/romantic");
 
   return (
     <div className={styles.buttonContainer}>

@@ -3,7 +3,7 @@ import styles from "./ConverHome.module.css";
 
 const BalanceBtn = () => {
   const movePage = useNavigate();
-  const toBalanceGame = () => movePage("/category/balancegame");
+  const toBalanceGame = () => movePage("/balancegame");
 
   return (
     <button onClick={toBalanceGame} className={styles.balanceGame}>
