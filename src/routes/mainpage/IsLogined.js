@@ -1,17 +1,19 @@
 import { useState } from "react";
 
 export default function IsLogined() {
-  const [address, setAddress] = useState("#");
+  const [render, setRender] = useState(false);
 
   const isLogin = () => {
-    const memberID = localStorage.getItem("memberID");
-    if (memberID !== null) setAddress("/profile");
-    console.log(address);
-    console.log(memberID);
+    if (!localStorage.getItem("memberID")) alert("please login");
+    setRender((current) => !current);
   };
   return (
     <>
-      <a href={`${address}`} className="profile-link" onClick={isLogin}>
+      <a
+        href={localStorage.getItem("memberID") ? "/profile" : "/#"}
+        className="profile-link"
+        onClick={isLogin}
+      >
         <span className="profile-image">
           <img
             src={`${process.env.PUBLIC_URL}/image/image02.png`}
