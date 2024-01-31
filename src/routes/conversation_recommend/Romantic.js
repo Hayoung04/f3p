@@ -1,10 +1,13 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+import styles from "../converModule/DetailCate.module.css";
+
 const Topic = [
   "함께하고 싶은 취미는?",
   "선호하는 데이트 스타일은?",
   "기념일은 어떻게 챙겼으면 좋겠어?",
+  "이건 테스트를 위한거임 djkdhfkjsfhksdsdfs",
 ];
 
 let variable = 0;
@@ -26,15 +29,20 @@ function Romantic() {
     setTopic(Topic[variable]);
   };
   return (
-    <div>
-      <button onClick={beforeBtn}>before</button>
-      <p>{topic}</p>
-      <button onClick={nextBtn}>next</button>
-      <button onClick={reset}>reset</button>
-      <p>
-        <Link to="/category">To Home</Link>
-      </p>
-    </div>
+    <>
+      <div className={styles.basic}>
+        <h1>F3PHER</h1>
+        <div className={styles.rayout1}>
+          <button onClick={beforeBtn}>before</button>
+          <div>{topic}</div>
+          <button onClick={nextBtn}>next</button>
+        </div>
+        <button onClick={reset}>reset</button>
+        <p>
+          <Link to="/category">To Home</Link>
+        </p>
+      </div>
+    </>
   );
 }
 

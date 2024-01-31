@@ -1,0 +1,10 @@
+.rayout1 {
+  display: flex;
+  justify-content: space-around;
+  vertical-align: middle;
+  margin-top: 20%;
+}
+
+.rayout1 div {
+  font-size: 80px;
+}

@@ -7,7 +7,7 @@ import SeriousConverBtn from "../../components/SeriousConverBtn";
 import BalanceBtn from "../../components/BalanceBtn";
 import IfBtn from "../../components/IfBtn";
 
-import styles from "./Conver.module.css";
+import styles from "../converModule/Conver.module.css";
 
 function ConverRmdHome() {
   return (
