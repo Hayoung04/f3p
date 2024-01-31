@@ -37,62 +37,59 @@ export default function ToLogin() {
       <Button variant="outlined" onClick={handleClickOpen}>
         {localStorage.getItem("memberID") ? "Logout" : "Login"}
       </Button>
-      if(!(localStorage.getItem("memberID")))
-      {
-        <Dialog
-          open={open}
-          onClose={handleClose}
-          PaperProps={{
-            component: "form",
-            onSubmit: (event) => {
-              event.preventDefault();
+      <Dialog
+        open={open}
+        onClose={handleClose}
+        PaperProps={{
+          component: "form",
+          onSubmit: (event) => {
+            event.preventDefault();
 
-              const formData = new FormData();
+            const formData = new FormData();
 
-              formData.append("name", name);
-              formData.append("password", password);
+            formData.append("name", name);
+            formData.append("password", password);
 
-              fetch("https://ll-api.jungsub.com/talk/login", {
-                method: "POST",
-                body: formData,
-                headers: {},
-              })
-                .then((data) => data.json())
-                .then((json) => {
-                  localStorage.setItem("memberID", json.ok._id);
-                  setX((c) => !c);
-                });
-              handleClose();
-            },
-          }}
-        >
-          <DialogTitle>Login</DialogTitle>
-          <DialogContent>
-            <DialogContentText>
-              <p>Please write your name and password.</p>
-            </DialogContentText>
-            <TextField
-              id="demo-helper-text-aligned"
-              type="text"
-              value={name}
-              onChange={onChangeId}
-              placeholder="Name"
-            />
-            <TextField
-              id="outlined-password-input"
-              type="password"
-              // autoComplete="current-password"
-              value={password}
-              onChange={onChangePW}
-              placeholder="Password"
-            />
-          </DialogContent>
-          <DialogActions>
-            <Button onClick={handleClose}>Cancel</Button>
-            <Button type="submit">Login</Button>
-          </DialogActions>
-        </Dialog>
-      }
+            fetch("https://ll-api.jungsub.com/talk/login", {
+              method: "POST",
+              body: formData,
+              headers: {},
+            })
+              .then((data) => data.json())
+              .then((json) => {
+                localStorage.setItem("memberID", json.ok._id);
+                setX((c) => !c);
+              });
+            handleClose();
+          },
+        }}
+      >
+        <DialogTitle>Login</DialogTitle>
+        <DialogContent>
+          <DialogContentText>
+            <p>Please write your name and password.</p>
+          </DialogContentText>
+          <TextField
+            id="demo-helper-text-aligned"
+            type="text"
+            value={name}
+            onChange={onChangeId}
+            placeholder="Name"
+          />
+          <TextField
+            id="outlined-password-input"
+            type="password"
+            // autoComplete="current-password"
+            value={password}
+            onChange={onChangePW}
+            placeholder="Password"
+          />
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose}>Cancel</Button>
+          <Button type="submit">Login</Button>
+        </DialogActions>
+      </Dialog>
     </React.Fragment>
   );
 }
