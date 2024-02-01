@@ -21,9 +21,6 @@ const Mainpage = () => {
           {/* 기존에 이미지와 링크를 걸어둔 코드에서 로그인되어 있으면 링크 변화를 줘서 이동하는 사이트 달라지게함, 기존 코드와 달라진점은 if문 추가외에는 없음 */}
           <IsLogined />
         </div>
-        <div className="header__toggleBtn">
-          <i className="fa-solid fa-bars"></i>
-        </div>
       </nav>
       <nav className="header2">
         <ul className="header2__menu">

@@ -37,7 +37,7 @@
 
 .header {
   background: white;
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   color: #002a32;
   padding: 50px;
