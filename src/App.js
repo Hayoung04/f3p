@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import ConverRmdHome from "./routes/conversation_recommend/ConverRmdHome";
 import Romantic from "./routes/conversation_recommend/Romantic";
 import Friend from "./routes/conversation_recommend/Friend";
 import Icebreaking from "./routes/conversation_recommend/Icebreaking";
