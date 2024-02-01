@@ -1,13 +1,6 @@
 import { useState } from "react";
 import styles from "../converModule/DetailCate.module.css";
 
-const Topic = [
-  "함께하고 싶은 취미는?",
-  "선호하는 데이트 스타일은?",
-  "기념일은 어떻게 챙겼으면 좋겠어?",
-  "이건 테스트를 위한거임 djkdhfkjsfhksdsdfs",
-];
-
 let variable = 0;
 
 function Romantic() {
@@ -33,7 +26,11 @@ function Romantic() {
           {"<"}
         </button>
 
-        <div className={styles.topic}>{topic}</div>
+        <div className={styles.topic}>
+          {topic} <br />
+          <span className={styles.txtCnt}>커플</span>
+          <span className={styles.txtCnt}>연애</span>
+        </div>
 
         <button className={styles.nextBtn} onClick={nextBtn}>
           {">"}
@@ -50,3 +47,11 @@ function Romantic() {
 }
 
 export default Romantic;
+
+const Topic = [
+  "우리의 데이트 빈도는 어떤 것 같아?",
+  "기념일은 어떻게 챙겼으면 좋겠어?",
+  "각자 이성친구를 만나는 걸 어떻게 생각해?",
+  "데이트 비용이 부담스럽지는 않아?",
+  "결혼에 대해서 어떻게 생각해?",
+];
