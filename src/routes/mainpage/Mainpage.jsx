@@ -65,7 +65,7 @@ const Mainpage = () => {
             style={{
               backgroundColor: "white",
               width: "100%",
-              height: "80px",
+              height: "150px",
               fontSize: "80px",
               display: "inline-block",
             }}
