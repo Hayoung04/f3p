@@ -58,9 +58,9 @@ input {
 }
 
 .submitBtn {
-  position: fixed;
-  top: 610px;
-  left: 560px;
+  position: relative;
+  top: 40px;
+  left: 540px;
   width: 200px;
   background-color: #2f303c;
   color: white;
@@ -76,9 +76,9 @@ input {
 }
 
 .DeleteBtn {
-  position: fixed;
-  top: 610px;
-  left: 790px;
+  position: relative;
+  top: 40px;
+  left: 580px;
   width: 200px;
   background-color: #2f303c;
   color: white;
@@ -90,7 +90,7 @@ input {
   font-weight: bold;
   font-style: normal;
   font-size: 15px;
-  margin-bottom: 10px;
+  margin-bottom: 100px;
   margin: 0 auto;
 }
 
